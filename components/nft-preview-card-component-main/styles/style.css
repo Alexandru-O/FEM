@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'outfit';
+    src: url('/components/nft-preview-card-component-main/fonts/outfit-variablefont_wght-webfont.woff2') format('woff2'),
+        url('/components/nft-preview-card-component-main/fonts/outfit-variablefont_wght-webfont.woff') format('woff');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'outfit',sans-serif;
+    color: white;
+}
+
+img {
+    border-radius: 10px;
+}
+
+section {
+    background-color: hsl(216, 50%, 16%);
+    margin: auto;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 2vh;
+    width: 100vw;
+    text-align: center;
+}
+
+h2 {
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 0;
+}
+
+p {
+    color: hsl(216, 50%, 70%);
+}
+
+.line {
+    margin:10px 0 10px 0;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    color: #00fff8;
+    display: flex;
+    align-items: center;
+    font-size: small;
+}
+
+.price img {
+    height: 1em;
+    padding-right: 5px;
+}
+
+.daysLeft {
+    color: hsl(215, 32%, 57%);
+    display: flex;
+    align-items: center;
+    font-size: small;
+}
+
+.daysLeft img{
+    height: 1em;
+    padding-right: 5px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    color: hsl(215, 32%, 57%)
+}
+
+.author img {
+    height: 2em;
+    padding-right: 10px;
+    border-radius: 50%;
+}
+
+span {
+    color: white;
+    padding-left: 5px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
