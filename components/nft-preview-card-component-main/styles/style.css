@@ -16,9 +16,13 @@ body {
     color: white;
 }
 
-img {
+.equilibriumImg {
     border-radius: 10px;
 }
+
+/* .equilibriumImg:hover {
+    transform: scale(1) rotate(5deg);
+} */
 
 section {
     background-color: hsl(216, 50%, 16%);
@@ -28,6 +32,10 @@ section {
     display: flex;
     flex-direction: column;
     padding: 20px;
+}
+
+section:hover {
+    transform: scale(1) translatey(-10px);
 }
 
 footer {
