@@ -28,10 +28,18 @@ main {
     background-color: hsl(244, 38%, 16%);
     border-radius: 10px;
     display: grid;
-    grid:   'headerImg' 1fr
-            'section' 1fr
-            'info' 1fr
+    grid:   'headerImg' auto
+            'section' auto
+            'info' auto
             /1fr;
+}
+
+@media (min-width:40em) {
+    main {
+        height: 250px;
+        width: 600px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .headerImg { grid-area: headerImg; }
