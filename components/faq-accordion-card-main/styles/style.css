@@ -64,21 +64,28 @@ section {
 
 .question {
     padding: 15px 0 15px 0;
-    border-bottom: 1px solid hsl(240, 5%, 91%);
+    /* border-bottom: 1px solid hsl(240, 5%, 91%); */
     display: flex;
     justify-content: space-between;
     color: hsl(237, 12%, 33%);
     cursor: pointer;
+    padding-bottom: 0;
 }
 
+.line {
+    width: 100%;
+    border-bottom: 1px solid  hsl(240, 5%, 91%);
+    margin-top: 10px;
+}
 .question:hover {
     color: hsl(14, 88%, 65%);
     font-weight: 700;
 }
 
-.bold {
+.selected {
     color: black;
     font-weight: 700;
+    padding-bottom: 10px;
 }
 
 .answer {
@@ -145,10 +152,14 @@ section {
         background: url('/components/faq-accordion-card-main/images/illustration-box-desktop.svg') no-repeat;
         /* width: 100px; */
         height: 100%;
-        background-position: center;
+        background-position: 50% 65%; 
         background-size: 50%;
         position: relative;
         left: -172px;
-        top: 30px
+        /* top: 30px */
+    }
+
+    .moveCube {
+        left: -190px;
     }
 }
