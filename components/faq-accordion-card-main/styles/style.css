@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Kumbh_Sans';
     src: url('/components/faq-accordion-card-main/fonts/Kumbh_Sans/KumbhSans-VariableFont_wght.ttf');
+    src: url('/FEM/components/faq-accordion-card-main/fonts/Kumbh_Sans/KumbhSans-VariableFont_wght.ttf');
 }
 
 
@@ -19,7 +20,7 @@ body {
 }
 
 .topImg {
-    background: url('/components/faq-accordion-card-main/images/illustration-woman-online-mobile.svg');
+    background: url('/FEM/components/faq-accordion-card-main/images/illustration-woman-online-mobile.svg');
     width: 250px;
     height: 180px;
     background-position: center;
@@ -30,7 +31,7 @@ body {
 }
 
 .bottomImg {
-    background: url('../images/bg-pattern-mobile.svg');
+    background: url('/FEM/components/faq-accordion-card-main/images/bg-pattern-mobile.svg');
     height: 104px;
     background-position: center;
     background-repeat: no-repeat;
@@ -95,7 +96,7 @@ section {
 }
 
 .arrow {
-    background: url('/components/faq-accordion-card-main/images/icon-arrow-down.svg');
+    background: url('/FEM/components/faq-accordion-card-main/images/icon-arrow-down.svg');
     width: 10px;
     background-repeat: no-repeat;
     background-position: center;
@@ -131,7 +132,7 @@ section {
         text-align: left;
     }
     .bottomImg {
-        background: url('/components/faq-accordion-card-main/images/bg-pattern-desktop.svg') no-repeat;
+        background: url('/FEM/components/faq-accordion-card-main/images/bg-pattern-desktop.svg') no-repeat;
         width: 100%;
         height: 100%;
         background-size: 180%;
@@ -139,7 +140,7 @@ section {
     }
 
     .topImg {
-        background: url('/components/faq-accordion-card-main/images/illustration-woman-online-desktop.svg') no-repeat;
+        background: url('/FEM/components/faq-accordion-card-main/images/illustration-woman-online-desktop.svg') no-repeat;
         width: 100%;
         height: 100%;
         background-size: 100%;
@@ -149,7 +150,7 @@ section {
     }
 
     .cube {
-        background: url('/components/faq-accordion-card-main/images/illustration-box-desktop.svg') no-repeat;
+        background: url('/FEM/components/faq-accordion-card-main/images/illustration-box-desktop.svg') no-repeat;
         /* width: 100px; */
         height: 100%;
         background-position: 50% 65%; 
