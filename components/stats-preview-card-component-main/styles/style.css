@@ -27,24 +27,17 @@ main {
     /* margin: auto; */
     background-color: hsl(244, 38%, 16%);
     border-radius: 10px;
-    display: grid;
-    grid:   'headerImg' auto
-            'section' auto
-            'info' auto
-            /1fr;
+    display: flex;
+    flex-direction: column;
 }
 
-@media (min-width:40em) {
-    main {
-        height: 250px;
-        width: 600px;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 20px;
 }
-
-.headerImg { grid-area: headerImg; }
-section { grid-area: section; }
-.info { grid-area: info;}
 
 .headerImg {
     background: linear-gradient(rgba(59, 16, 99, 0.6),rgba(59, 16, 99, 0.6)) ,url('/components/stats-preview-card-component-main/images/image-header-mobile.jpg');
@@ -54,12 +47,12 @@ section { grid-area: section; }
     border-top-right-radius: 10px;
 }
 
-span {
-    color: rgb(138, 43, 226);
-}
-
 h2 {
     text-align: center;
+}
+
+span {
+    color: rgb(138, 43, 226);
 }
 
 p {
@@ -68,14 +61,6 @@ p {
     color: hsla(0, 0%, 100%, 0.75);
     padding: 0 30px 0 30px;
     line-height: 1.9em;
-}
-
-.info {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-weight: 700;
-    margin-top: 20px;
 }
 
 .info p {
@@ -88,6 +73,40 @@ p {
 footer {
     position: absolute;
     bottom: 1vh;
+}
+
+@media (min-width:40em) {
+    main {
+        height: 250px;
+        width: 550px;
+        flex-direction: row;
+    }
+    .left {
+        flex-direction: column;
+        margin: 10px 0 0 30px;
+    }
+    .info {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 40px;
+    }
+    .headerImg {
+        height: 250px;
+        width: 550px;
+        order :3;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 10px;
+    }
+
+    h2 {
+        text-align: left;
+    }
+
+    p {
+        text-align: left;
+        padding: 0;
+    }
+    
 }
 
 .attribution { font-size: 11px; text-align: center; }
