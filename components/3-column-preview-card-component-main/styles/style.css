@@ -105,8 +105,10 @@ button {
 @media (min-width:40em) {
     main {
         width: 800px;
-        height: 400px;
+        min-height: 100vh;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
     .card:nth-of-type(1) {
         border-radius: 10px 0 0 10px;
@@ -119,6 +121,12 @@ button {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        height: 400px;
+        display: block;
+    }
+
+    .card:hover {
+        height: 420px;
     }
 
     .card button{
