@@ -20,7 +20,7 @@ body {
 main {
     background-color: whitesmoke;
     width: 300px;
-    height: 460px;
+    height: 470px;
     border-radius: 10px;
 }
 
@@ -43,24 +43,33 @@ h3 {
     color: hsl(217, 19%, 35%);
 }
 
+article {
+    height:270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 article>p {
-    margin: 20px 30px 0 30px;
+    margin: 20px 30px 20px 30px;
     font-size: 0.9em;
     font-weight: 500;
 }
 
 .info1 {
-    margin: 20px 30px 20px 30px;
+    margin: 0px 30px 0 30px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    padding: 10px 0 10px 0;
 }
 
 .avatar {
     background: url('../images/avatar-michelle.jpg') no-repeat;
-    width: 43px;
-    height: 43px;
+    width: 50px;
+    height: 50px;
     background-size: 100%;
+    background-position: center;
     border-radius: 50%;
 }
 
@@ -72,6 +81,7 @@ article>p {
 .bio {
     padding-left: 20px;
     line-height: 0.5em;
+    height: 50px;
 }
 
 .shareBtn {
@@ -79,7 +89,7 @@ article>p {
     width: 30px;
     height: 30px;
     mask-position: center;
-    background: hsl(217, 19%, 35%);
+    background: hsl(217, 19%, 45%);
 }
 
 .shareBtnBg {
@@ -90,6 +100,66 @@ article>p {
 
 .shareBtnActive {
     background: white;
+}
+
+.date {
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.info2 {
+    height: 50px;
+    display: flex;
+    background-color: hsl(217, 19%, 35%);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px 10px 30px;
+    border-radius: 0 0 10px 10px;
+    letter-spacing: 0.3em;
+    color: hsl(253, 7%, 76%);
+    font-size: 0.9em;
+    line-height: 50px;
+    gap:5px;
+}
+.info2 p {
+    margin: 0;
+}
+
+.facebook {
+    background: url('../images/icon-facebook.svg') no-repeat;
+    height: 30px;
+    width: 30px;
+    background-position: center;
+}
+
+.twitter {
+    background: url('../images/icon-twitter.svg') no-repeat;
+    height: 30px;
+    width: 30px;
+    background-position: center;
+}
+
+.pinterest {
+    background: url('../images/icon-pinterest.svg') no-repeat;
+    height: 30px;
+    width: 30px;
+    background-position: center;
+}
+
+.info2 .shareBtnBg {
+    background-color: hsl(217, 19%, 45%);
+}
+
+.info2 .shareBtn {
+    background: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: flex;
 }
 
 .attribution { font-size: 11px; text-align: center; }
