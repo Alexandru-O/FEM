@@ -150,13 +150,11 @@ section {
 
     .cube {
         background: url('/components/faq-accordion-card-main/images/illustration-box-desktop.svg') no-repeat;
-        /* width: 100px; */
         height: 100%;
         background-position: 50% 65%; 
         background-size: 50%;
         position: relative;
         left: -172px;
-        /* top: 30px */
     }
 
     .moveCube {
