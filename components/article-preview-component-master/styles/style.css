@@ -126,26 +126,40 @@ article>p {
 }
 
 .facebook {
-    background: url('../images/icon-facebook.svg') no-repeat;
+    mask: url('../images/icon-facebook.svg') no-repeat;
     height: 30px;
     width: 30px;
-    background-position: center;
+    mask-position: center;
+    background-color: white;
 }
 
 .twitter {
-    background: url('../images/icon-twitter.svg') no-repeat;
+    mask: url('../images/icon-twitter.svg') no-repeat;
     height: 30px;
     width: 30px;
-    background-position: center;
+    mask-position: center;
+    background-color: white;
 }
 
 .pinterest {
-    background: url('../images/icon-pinterest.svg') no-repeat;
+    mask: url('../images/icon-pinterest.svg') no-repeat;
     height: 30px;
     width: 30px;
-    background-position: center;
+    mask-position: center;
+    background-color: white;
 }
 
+.facebook:hover {
+    background-color: hsl(162, 40%, 68%);
+}
+
+.twitter:hover {
+    background-color: hsl(162, 40%, 68%);
+}
+
+.pinterest:hover {
+    background-color: hsl(162, 40%, 68%);
+}
 .info2 .shareBtnBg {
     background-color: hsl(217, 19%, 45%);
 }
@@ -160,6 +174,63 @@ article>p {
 
 .visible {
     display: flex;
+}
+
+@media (min-width:50em) {
+    main {
+        width: 700px;
+        height: 270px;
+        display: flex;
+        flex-direction: row;
+    }
+    .headerImg {
+        width: 300px;
+        height: auto;
+        border-radius: 10px 0 0 10px;
+    }
+    article {
+        width:400px;
+        justify-content: center;
+        position: relative;
+    }
+
+    .info2 {
+        height: 50px;
+        width: 150px;
+        position: absolute;
+        line-height: 50px;
+        padding: 0 30px 0 30px;
+        border-radius: 10px;
+        bottom: 90px;
+        right: -50px;
+        /* display: flex; */
+    }
+    .info2::before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 10px;
+        background: hsl(217, 19%, 35%);
+        clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+        bottom: -10px;
+        left: 105px;
+    }
+
+    .info2 .shareBtn {
+        display: none;
+    }
+
+    .info1 {
+        display: flex;
+    }
+
+    .shareActive {
+        background: white;
+    }
+
+    .bgActive {
+        background: hsl(217, 19%, 55%);
+    }
 }
 
 .attribution { font-size: 11px; text-align: center; }

@@ -6,5 +6,7 @@ for (const shareBtn of shareBtns) {
     shareBtn.addEventListener('click', (e) => {
         info1.classList.toggle('hidden');
         info2.classList.toggle('visible');
+        shareBtn.classList.toggle('shareActive');
+        e.target.parentElement.classList.toggle('bgActive');
     });
 }
