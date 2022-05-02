@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('../fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Big Shoulders Display';
+    src: url('../fonts/Big_Shoulders_Display/BigShouldersDisplay-VariableFont_wght.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    color: white;
+    position: relative;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: auto;
+    padding: 50px 0 50px 0;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display',sans-serif;
+    font-weight: 700;
+    margin-top: 30px;
+    font-size: 2em;
+}
+
+p {
+    font-family: 'Lexend_Deca',sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-weight: 400;
+    font-size: 0.8em;
+    line-height: 1.5em;
+}
+
+.card:nth-of-type(1) {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 10px 10px 0 0px;
+}
+
+.card:nth-of-type(2) {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.card:nth-of-type(3) {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 0 10px 10px;
+}
+
+.card {
+    padding: 0 30px 0 30px;
+}
+
+.card:nth-of-type(1) .carIcon {
+    background: url('../images/icon-sedans.svg') no-repeat;
+    height: 40px;
+    margin-top: 30px;
+    background-size: 20%;
+}
+
+.card:nth-of-type(2) .carIcon {
+    background: url('../images/icon-suvs.svg') no-repeat;
+    height: 40px;
+    margin-top: 30px;
+    background-size: 20%;
+}
+
+.card:nth-of-type(3) .carIcon {
+    background: url('../images/icon-luxury.svg') no-repeat;
+    height: 40px;
+    margin-top: 30px;
+    background-size: 20%;
+}
+
+button {
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 20px;
+    border: 0;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
+
+.card:nth-of-type(1) .more {
+    color: hsl(31, 77%, 52%);
+}
+
+.card:nth-of-type(2) .more {
+    color: hsl(184, 100%, 22%);
+}
+
+.card:nth-of-type(3) .more {
+    color: hsl(179, 100%, 13%);
+}
+
+
+@media (min-width:40em) {
+    main {
+        width: 800px;
+        min-height: 100vh;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .card:nth-of-type(1) {
+        border-radius: 10px 0 0 10px;
+    }
+    .card:nth-of-type(3) {
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 400px;
+        display: block;
+    }
+
+    .card:hover {
+        height: 420px;
+    }
+
+    .card button{
+        align-self: flex-start;
+        margin-top: 70px;
+    }
+
+    .more:hover {
+        border: 1px solid white;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .card:nth-of-type(1) .more:hover {
+        background-color: transparent;
+        color: white;
+    }
+    .card:nth-of-type(2) .more:hover {
+        background-color: transparent;
+        color: white;
+    }
+    .card:nth-of-type(3) .more:hover {
+        background-color: transparent;
+        color: white;
+    }
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: black; 
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
