@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'Josefin_Sans';
+    src: url('../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100vw;
+    font-family: 'Josefin_Sans',sans-serif;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    background: url('../images/bg-pattern-desktop.svg') no-repeat;
+}
+main {
+    padding-bottom: 3rem;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    height: 25px;
+}
+
+header {
+    text-align: left;
+    padding:30px;
+}
+
+.banner {
+    background: url('../images/hero-mobile.jpg') no-repeat;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+}
+
+main {
+    padding: 30px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 10px;
+}
+
+span {
+    font-weight: 200;
+    color: hsl(0, 36%, 70%);
+}
+
+p {
+    color: hsl(0, 36%, 70%);
+    line-height: 25px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    line-height: 3rem;
+    width: 100%;
+}
+
+#email {
+    border: 1px solid hsl(0, 36%, 70%);
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    color: hsl(0, 36%, 70%);
+    font-weight: 600;
+    position: relative;
+}
+
+button {
+    border: 0;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%),hsl(0, 74%, 74%)),url('../images/icon-arrow.svg') no-repeat;
+    padding: 10px;
+    height: 48px;
+    width: 66px;
+    border-radius: 50px;
+    position: absolute; 
+    right: 30px;
+}
+button img{
+    height: 100%;
+}
+
+#email:focus {
+    outline-color: black;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

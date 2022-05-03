@@ -2,31 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="./scripts/main.js" defer></script>
   
-  <title>Frontend Mentor | Base Apparel coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Base Apparel coming soon page</title>
 </head>
 <body>
+  <header><img src="./images/logo.svg" alt="logo" class="logo"></header>
+  <div class="banner"></div>
+  <main>
+    <h1><span>WE'RE</span> COMING SOON</h1>
 
-  We're coming soon
+    <p>Hello fellow shoppers! We're currently building our new fashion store. 
+    Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
+    <input type="email" name="email" id="email" placeholder="Email Address">
+    <button><img src="./images/icon-arrow.svg" alt="arrow"></button>
+  </main>
 
-  Email Address
-  
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Alexandru-O</a>.
     </p>
   </footer>
 </body>
