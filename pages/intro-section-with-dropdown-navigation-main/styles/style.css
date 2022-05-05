@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'Epilogue';
+    src: url('../fonts/Epilogue/Epilogue-VariableFont_wght.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100vw;
+    font-family: 'Epilogue',sans-serif;
+    position: relative;
+    text-align: center;
+}
+
+nav {
+    display: none;
+}
+
+.logo {
+    width: 50%;
+    height: 27px;
+    background: url('../images/logo.svg') no-repeat;
+    margin: 20px;
+}
+
+header {
+    display: flex;
+}
+
+.hamb {
+    width: 50%;
+    height: 27px;
+    background: url('../images/icon-menu.svg') no-repeat;
+    background-position: right;
+    margin: 20px;
+}
+
+main {
+    padding-bottom: 2rem;
+}
+
+section {
+    width: 100%;
+}
+
+ul {
+    margin: 0;
+}
+
+.mainImage {
+    background: url('../images/image-hero-mobile.png');
+    height: 300px;
+    background-size: cover;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 2rem;
+}
+
+main h1 {
+    font-size: 2.3rem;
+}
+
+main p {
+    color: hsl(0, 0%, 41%);
+    line-height: 1.5rem;
+    padding: 0 20px;
+    font-weight: 500;
+}
+
+button {
+    border-radius: 15px;
+    border: 0;
+    background: hsl(0, 0%, 8%);
+    color: white;
+    padding: 15px 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.clients {
+    display: flex;
+    width: 90%;
+    margin: 20px 20px;
+    gap: 30px;
+}
+
+.client {
+    height: 36px;
+    flex: 1;
+}
+
+#databiz {
+    background: url('../images/client-databiz.svg') no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#audiophile {
+    background: url('../images/client-audiophile.svg') no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#meet {
+    background: url('../images/client-meet.svg') no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#maker {
+    background: url('../images/client-maker.svg') no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
