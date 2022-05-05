@@ -1,16 +1,17 @@
-const submit = document.querySelector('button')
-const inputs = document.querySelectorAll('input')
-
-// sumbmit.addEventListener('click', function(e) => {
-//     e.preventDefault();
-// });
+const submit = document.querySelector('button');
+const inputs = document.querySelectorAll('input');
+const para = document.querySelectorAll('.wrap p');
 
 submit.addEventListener('click', () => {
     for (const input of inputs) {
-        if (input.validity.typeMismatch) {
+        input.classList.remove('invalid');
+        input.nextElementSibling.classList.remove('visible');
+        input.nextElementSibling.nextElementSibling.classList.remove('visible');
+        
+        if (input.validity.valueMissing || input.validity.typeMismatch) {
             input.nextElementSibling.classList.add('visible');
             input.classList.add('invalid');
-            // console.log(input.nextElementSibling);
+            input.nextElementSibling.nextElementSibling.classList.add('visible');
         }
     }
 })

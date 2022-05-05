@@ -101,12 +101,21 @@ form span {
     height: 15px;
     background-size: contain;
     position: absolute;
-    bottom:20px;
+    bottom:58px;
     right: 40px;
     display: none;
 }
 
-.visible {
+.wrap p {
+    box-sizing: border-box;
+    color: hsl(0, 100%, 74%);
+    text-align: right;
+    width: 100%;
+    padding-right: 20px;
+    display: none;
+}
+
+.wrap .visible {
     display: block;
 }
 
@@ -124,7 +133,7 @@ input:focus {
     box-shadow: 0 0px 1px hsl(248, 32%, 49%) inset, 0 0 5px hsl(248, 32%, 49%);
 }
 
-.invalid {
+.wrap .invalid {
     outline: none;
     border-color: hsl(0, 82%, 49%);
     box-shadow: 0 0px 1px hsl(0, 82%, 49%) inset, 0 0 5px hsl(0, 82%, 49%);
@@ -133,20 +142,25 @@ input:focus {
 @media(min-width:50rem) {
     main {
         width: 800px;
-        height: 500px;
+        height: 550px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
     }
 
     main > h1 {
+        box-sizing: border-box;
         width: 50%;
         height: 50%;
+        padding-top: 135px;
+        text-align: left;
     }
-    main p {
+    main > p {
         margin: 0;
         width: 50%;
         height: 50%;
+        text-align: left;
+        font-size: 0.8rem;
     }
     .blue {
         margin: 0;
@@ -158,17 +172,20 @@ input:focus {
         margin: 0; 
         width: 100%;
         height: auto;
-        padding: 5px;
+        line-height: 40px;
+        font-size: 0.7rem;
     }
     #submitForm {
         margin-top: 20px;
-        height: 430px;
+        height: 480px;
         width: 50%;
     }
     input {
         box-sizing: border-box;
         width: 90%;
-        margin: 10px 20px;
+        margin: 20px 20px 0 20px;
+        padding: 20px 20px;
+        border-radius: 5x;
     }
     form p {
         width: 100%;
@@ -177,11 +194,14 @@ input:focus {
     }
     button {
         box-sizing: border-box;
-        margin: 0;
+        margin: 20px 20px 10px 20px;
         padding: 10px;
         width: 90%;
         border-radius: 5px;
         
+    }
+    .invalidIcon {
+        bottom:40px;
     }
 }
 
