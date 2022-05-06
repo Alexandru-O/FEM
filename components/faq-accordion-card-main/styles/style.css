@@ -1,3 +1,16 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
+
 @font-face {
     font-family: 'Kumbh_Sans';
     /* src: url('/components/faq-accordion-card-main/fonts/Kumbh_Sans/KumbhSans-VariableFont_wght.ttf');
@@ -5,7 +18,6 @@
     src: url('../fonts/Kumbh_Sans/KumbhSans-VariableFont_wght.ttf');
 
 }
-
 
 body {
     margin: 0;
@@ -152,12 +164,7 @@ section {
     }
 
     .cube {
-<<<<<<< HEAD
-        background: url('/components/faq-accordion-card-main/images/illustration-box-desktop.svg') no-repeat;
-=======
         background: url('../images/illustration-box-desktop.svg') no-repeat;
-        /* width: 100px; */
->>>>>>> 180d66c4ab84441c36c4f2dd219764c8ca927657
         height: 100%;
         background-position: 50% 65%; 
         background-size: 40%;

@@ -1,5 +1,17 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
 @font-face {
-    font-family: 'Epilogue';
+    font-family: 'Epilogue',sans-serif;
     src: url('../fonts/Epilogue/Epilogue-VariableFont_wght.ttf');
 }
 
@@ -62,7 +74,8 @@ footer {
 }
 
 main h1 {
-    font-size: 2.3rem;
+    margin: 40px 0;
+    font-size: 2.2rem;
 }
 
 main p {
@@ -72,7 +85,7 @@ main p {
     font-weight: 500;
 }
 
-button {
+section button {
     border-radius: 15px;
     border: 0;
     background: hsl(0, 0%, 8%);
@@ -86,8 +99,8 @@ button {
 
 .clients {
     display: flex;
-    width: 90%;
-    margin: 20px 20px;
+    max-width: 300px;
+    margin: 20px auto;
     gap: 30px;
 }
 
@@ -118,6 +131,63 @@ button {
     background: url('../images/client-maker.svg') no-repeat;
     background-size: contain;
     background-position: center;
+}
+
+/* body {
+    background: rgb(0 0 0 / .5);
+    opacity: 0.2;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 2;
+}
+
+.navbar {
+    z-index: 4;
+    background-color: hsl(0, 0%, 98%);
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    width: 200px;
+} */
+
+@media (min-width:40em) {
+    main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 500px;
+        min-height: calc(100vh - 67px);
+    }
+
+    main h1 {
+        font-size: 3rem;
+    }
+
+    main p {
+        padding: 0;
+    }
+    section {
+        width: 400px;
+        height: 100%;
+        text-align: left;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: auto;
+    }
+    .mainImage {
+        background: url('../images/image-hero-desktop.png') no-repeat;
+        width: 250px;
+        height: 100%;
+        order: 2;
+        background-position: left;
+        background-size: contain;
+    }
+    .clients {
+        width: 100%;
+        margin: 0;
+    }
 }
 
 .attribution { font-size: 11px; text-align: center; }
