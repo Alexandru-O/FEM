@@ -30,7 +30,7 @@ nav {
 }
 
 .logo {
-    width: 50%;
+    width: 10%;
     height: 27px;
     background: url('../images/logo.svg') no-repeat;
     margin: 20px;
@@ -154,8 +154,9 @@ section button {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        height: 500px;
-        min-height: calc(100vh - 67px);
+        height: calc(100vh - 67px);
+        width: 800px;
+        margin: auto;
     }
 
     main h1 {
@@ -166,27 +167,37 @@ section button {
         padding: 0;
     }
     section {
-        width: 400px;
-        height: 100%;
+        width: 50%;
+        height: 100%; 
         text-align: left;
-        padding-left: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        margin-left: auto;
     }
     .mainImage {
         background: url('../images/image-hero-desktop.png') no-repeat;
-        width: 250px;
+        width: 50%;
         height: 100%;
         order: 2;
-        background-position: left;
+        background-position: right;
         background-size: contain;
     }
     .clients {
         width: 100%;
         margin: 0;
+    }
+    .hamb {
+        display: none;
+    }
+    .navbar {
+        display: flex;
+    }
+    .submenu {
+        display: none;
+    }
+    ul {
+        display: flex;
     }
 }
 
