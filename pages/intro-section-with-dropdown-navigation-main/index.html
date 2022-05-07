@@ -15,30 +15,31 @@
     <div class="logo"></div>
     <div class="hamb"></div>
     <nav class="navbar">
+      <div class="closeIcon"></div>
       <ul class="menu">
         <li class="item has-submenu">
           <a href="#" role="button">Features</a>
           <ul class="submenu">
-            <li class="subitem">Todo List</li>
-            <li class="subitem">Calendar</li>
-            <li class="subitem">Reminders</li>
-            <li class="subitem">Planning</li>
+            <li class="subitem" id="todo"><a href="#" role="button">Todo List</a></li>
+            <li class="subitem" id="calendar"><a href="#" role="button">Calendar</a></li>
+            <li class="subitem" id="reminders"><a href="#" role="button">Reminders</a></li>
+            <li class="subitem" id="planning"><a href="#" role="button">Planning</a></li>
           </ul>
         </li>
         <li class="item has-submenu">
           <a href="#" role="button">Company</a>
           <ul class="submenu">
-            <li class="subitem">History</li>
-            <li class="subitem">Our Team</li>
-            <li class="subitem">Blog</li>
+            <li class="subitem noIcon" id="history"><a href="#" role="button">History</a></li>
+            <li class="subitem noIcon" id="ourTeam"><a href="#" role="button">Our Team</a></li>
+            <li class="subitem noIcon" id="blog"><a href="#" role="button">Blog</a></li>
           </ul>
         </li>
         <li class="item" role="button"><a href="#">Careers</a></li>
         <li class="item" role="button"><a href="#">About</a></li>
       </ul>
 
-      <button>Login</button>
-      <button>Register</button>
+      <button id="loginBtn">Login</button>
+      <button id="registerBtn">Register</button>
     </nav>
   </header> 
   <main>

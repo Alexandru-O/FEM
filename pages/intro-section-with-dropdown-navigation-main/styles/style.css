@@ -30,18 +30,22 @@ nav {
 }
 
 .logo {
-    width: 10%;
-    height: 27px;
+    width: 150px;
+    height: 45px;
     background: url('../images/logo.svg') no-repeat;
-    margin: 20px;
+    margin: 20px 0 0 20px;
+    background-position: left center;
+    /* background-size: contain; */
 }
 
 header {
     display: flex;
+    width: calc(100% - 40px);
+    height: 60px;
 }
 
 .hamb {
-    width: 50%;
+    width: 90%;
     height: 27px;
     background: url('../images/icon-menu.svg') no-repeat;
     background-position: right;
@@ -138,16 +142,105 @@ section button {
     opacity: 0.2;
     transition: opacity 0.5s ease-in-out;
     z-index: 2;
+} */
+
+.closeIcon {
+    background: url('../images/icon-close-menu.svg') no-repeat;
+    width: calc(100% - 40px);
+    height: 27px;
+    background-position: right;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+}
+
+.has-submenu > a {
+    padding-right: 20px;
+    background: url('../images/icon-arrow-down.svg') no-repeat;
+    background-position: center right;
+}
+
+.item {
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.subitem {
+    padding-left: 25px;
+    line-height: 14px;
+    margin-top: 15px;
+}
+
+.noIcon {
+    padding: 0;
+}
+
+#todo {
+    background: url('../images/icon-todo.svg') no-repeat;
+    height: 14px;
+    background-size: contain;
+}
+
+#calendar {
+    background: url('../images/icon-calendar.svg') no-repeat;
+    height: 14px;
+    background-size: contain;
+}
+
+#reminders {
+    background: url('../images/icon-reminders.svg') no-repeat;
+    height: 14px;
+    background-size: contain;
+}
+
+#planning {
+    background: url('../images/icon-planning.svg') no-repeat;
+    height: 14px;
+    background-size: contain;
 }
 
 .navbar {
+    display: block;
     z-index: 4;
     background-color: hsl(0, 0%, 98%);
     position: absolute;
     right: 0;
     height: 100vh;
     width: 200px;
-} */
+    color: hsl(0, 0%, 41%);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.navbar button {
+    border: 0;
+    background-color: transparent;
+    width: calc(100% - 60px);
+    color: hsl(0, 0%, 41%);
+    cursor: pointer;
+    margin: 10px 30px;
+    font-weight: 500
+}
+
+#registerBtn {
+    border: 2px solid hsl(0, 0%, 41%);
+    border-radius: 10px;
+    padding: 10px;;
+
+}
+
+.submenu {
+    display: none;
+}
 
 @media (min-width:40em) {
     main {
@@ -191,13 +284,34 @@ section button {
         display: none;
     }
     .navbar {
+        width: calc(100% - 170px);
+        height: 40px;
+        margin-top: 20px;
         display: flex;
     }
-    .submenu {
+    .navbar button {
+        width: 100px;
+        margin: 0;
+    }
+    #loginBtn {
+        margin-left: auto;
+    }
+    #registerBtn {
+        margin-right: 20px;
+    }
+    .closeIcon {
         display: none;
     }
     ul {
         display: flex;
+        line-height: 40px;
+        width: 50%;
+        margin: 0;
+        padding: 0;
+        gap: 30px;
+    }
+    .item {
+        margin: 0;
     }
 }
 
