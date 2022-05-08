@@ -23,10 +23,7 @@ body {
     font-family: 'Epilogue',sans-serif;
     position: relative;
     text-align: center;
-}
-
-nav {
-    display: none;
+    background-color: hsl(0, 0%, 98%);
 }
 
 .logo {
@@ -35,17 +32,16 @@ nav {
     background: url('../images/logo.svg') no-repeat;
     margin: 20px 0 0 20px;
     background-position: left center;
-    /* background-size: contain; */
 }
 
 header {
     display: flex;
-    width: calc(100% - 40px);
+    width: 100%;
     height: 60px;
 }
 
 .hamb {
-    width: 90%;
+    width: calc(100% - 150px);
     height: 27px;
     background: url('../images/icon-menu.svg') no-repeat;
     background-position: right;
@@ -53,6 +49,11 @@ header {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 67px);
     padding-bottom: 2rem;
 }
 
@@ -66,7 +67,8 @@ ul {
 
 .mainImage {
     background: url('../images/image-hero-mobile.png');
-    height: 300px;
+    height: calc(750px / 2);
+    width: 100%;
     background-size: cover;
 }
 
@@ -99,6 +101,23 @@ section button {
     font-size: 1rem;
     margin: 20px 0;
     cursor: pointer;
+    width: 160px;
+    height: 50px;
+}
+
+section button:hover {
+    
+    color: hsl(0, 0%, 8%);
+    background-color: hsl(0, 0%, 98%);
+    border: 1px solid hsl(0, 0%, 8%);
+}
+
+a:hover {
+    color: black;
+}
+
+header button:hover {
+    color: black;
 }
 
 .clients {
@@ -158,11 +177,6 @@ a {
     color: hsl(0, 0%, 41%);
 }
 
-.has-submenu > a {
-    padding-right: 20px;
-    background: url('../images/icon-arrow-down.svg') no-repeat;
-    background-position: center right;
-}
 
 .item {
     margin-bottom: 15px;
@@ -209,7 +223,7 @@ ul {
 }
 
 .navbar {
-    display: block;
+    display: none;
     z-index: 4;
     background-color: hsl(0, 0%, 98%);
     position: absolute;
@@ -242,7 +256,22 @@ ul {
     display: none;
 }
 
-@media (min-width:40em) {
+.visible {
+    display: block;
+}
+
+.arrowDown {
+    padding-right: 20px;
+    background: url('../images/icon-arrow-down.svg') no-repeat center right;
+}
+
+.arrowUp {
+    padding-right: 20px;
+    background: url('../images/icon-arrow-up.svg') no-repeat center right;
+}
+
+
+@media (min-width:50em) {
     main {
         display: flex;
         flex-direction: column;
