@@ -30,6 +30,7 @@ main {
 
 img {
     height: 50px;
+    width: 50px;
     float: left;
     border: 2px solid white;
     border-radius: 50%;
@@ -38,7 +39,7 @@ img {
 
 .wrap {
     padding: 20px;
-    height: 54px;
+    /* height: 54px; */
     background: hsl(246, 80%, 60%);
     border-radius: 10px;
     color: hsl(236, 100%, 87%);
@@ -66,6 +67,10 @@ img {
 .period span:hover {
     color: white;
     cursor: pointer;
+}
+
+.active {
+    color: white;
 }
 
 .container {
@@ -155,6 +160,26 @@ img {
     background: url('../images/icon-self-care.svg') no-repeat, hsl(43, 84%, 65%);
     background-position: top -10px right 20px;
     background-size: 15%;
+}
+
+@media (min-width:50rem) {
+    main {
+        width: 800px;
+        height: 400px;
+        flex-direction: row;
+    }
+    .top {
+        margin: 0;
+        height: 100%;
+    }
+    .wrap {
+        display: flex;
+        flex-direction: column;
+    }
+    .period {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 
