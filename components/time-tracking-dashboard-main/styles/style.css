@@ -77,17 +77,43 @@ img {
     margin-top: 50px;
 }
 
-.dots {
-    background: url('../images/icon-ellipsis.svg') no-repeat;
-    width: 150px;
-    height: 5px;
-    display: inline-block;
+.blueContainer {
+    background-color: hsl(235, 46%, 20%);
+    padding: 20px;
+    border-radius: 10px;
 }
 
-.blueContainer>h4 {
+.dots {
+    background: url('../images/icon-ellipsis.svg') no-repeat center right;
+    width: 130px;
+    height: 5px;
     display: inline-block;
-    width: 150px;
+    background-size: 12%;
+    cursor: pointer;
 }
+
+.blueContainer div:nth-of-type(1) {
+    display: inline-block;
+    width: 125px;
+    font-size: 0.9rem;
+}
+
+.blueContainer div:nth-of-type(3) {
+    display: inline-block;
+    width: 125px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 100;
+}
+
+.blueContainer div:nth-of-type(4) {
+    display: inline-block;
+    width: 130px;
+    text-align: right;
+    font-size: 0.7rem;
+    color: hsl(235, 45%, 71%);
+}
+
 
 .work {
     padding-top: 30px;
@@ -131,11 +157,6 @@ img {
     background-size: 15%;
 }
 
-
-.blueContainer {
-    background-color: hsl(235, 46%, 20%);
-    height: 80px;
-}
 
 .attribution {
     font-size: 11px;
