@@ -23,7 +23,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    min-height: calc(100vh - 3rem);
     justify-content: center;
     width: 300px;
 }
@@ -90,16 +89,16 @@ img {
 
 .dots {
     background: url('../images/icon-ellipsis.svg') no-repeat center right;
-    width: 130px;
+    width: 50%;
     height: 5px;
     display: inline-block;
-    background-size: 12%;
+    /* background-size: 10%; */
     cursor: pointer;
 }
 
 .blueContainer div:nth-of-type(1) {
     display: inline-block;
-    width: 125px;
+    width: 45%;
     font-size: 0.9rem;
 }
 
@@ -163,10 +162,16 @@ img {
 }
 
 @media (min-width:50rem) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     main {
-        width: 800px;
-        height: 400px;
-        flex-direction: row;
+        width: 700px;
+        height: 300px;
+        flex-flow: column wrap;
+        
     }
     .top {
         margin: 0;
@@ -179,6 +184,22 @@ img {
     .period {
         flex-direction: column;
         gap: 10px;
+    }
+    .container {
+        width: 25%;
+    }
+    .top {
+        height: 100%;
+        width: 20%;
+    }
+    .blueContainer div:nth-of-type(4) {
+        text-align: left;
+    }
+    .blueContainer div:nth-of-type(1) {
+        font-size: 0.7rem;
+    }
+    .dots {
+        background-size: 20%;
     }
 }
 
