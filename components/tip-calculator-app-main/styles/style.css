@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Space_Mono';
+    src: url('../fonts/Space_Mono/SpaceMono-Regular.ttf');
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    font-family: 'Space_Mono',sans-serif;
+    background: hsl(185, 41%, 84%);
+}
+
+header {
+    background: url('../images/logo.svg') no-repeat center;
+    height: 15vh;
+}
+
+main {
+    padding-bottom: 3rem;
+    background-color: hsl(0, 0%, 100%);
+    min-height: 85vh;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 30px;
+    color: hsl(186, 14%, 43%);
+}
+
+label {
+    font-weight: 800;
+}
+
+input {
+    width: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    appearance: textfield;
+    height: 40px;
+    border: 0;
+    border-radius: 5px;
+    color: hsl(183, 100%, 15%);
+    line-height: 40px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+    padding: 0 20px 0 40px;
+    font-family: 'Space_Mono';
+    outline: none;
+    margin: 10px 0 30px 0;
+}
+
+input[type=number]:focus {
+    box-shadow: 0 0 5px hsl(183, 100%, 15%); 
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: hsl(184, 14%, 56%);
+    margin: 20px 0 30px 0;
+    cursor: pointer;
+}
+
+.tip {
+    background-color: hsl(183, 100%, 15%);
+    padding: 5px 10px;
+    width: calc(50% - 10px);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 25px;
+    color: hsl(189, 41%, 97%);
+    font-weight: 800;
+}
+
+#custom {
+    background: hsl(189, 41%, 95%);
+    color: hsl(186, 14%, 43%);
+}
+
+#bill {
+    background: url('../images/icon-dollar.svg') no-repeat center left 20px hsl(189, 41%, 95%);
+}
+
+#people {
+    background: url('../images/icon-person.svg') no-repeat center left 20px hsl(189, 41%, 95%);
+}
+
+.result {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    color: hsl(189, 41%, 97%);
+    padding: 30px 20px;
+}
+
+button {
+    border: 0;
+    background-color: hsl(172, 67%, 45%);
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    color: hsl(183, 100%, 15%);
+    font-family: 'Space_Mono';
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tipAmount div:nth-of-type(2) {
+    font-size: 0.8rem;
+    color: hsl(184, 14%, 56%);
+    font-weight: 700;
+}
+
+.tipAmount {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    height: 43px;
+}
+
+.total div:nth-of-type(2) {
+    font-size: 0.8rem;
+    color: hsl(184, 14%, 56%);
+    font-weight: 700; 
+}
+
+#tipAmountValue {
+    line-height: 43px;
+    font-size: 2rem;
+    text-align: right;
+    color: hsl(172, 67%, 45%);
+    font-weight: bold;
+}
+
+.total {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    height: 43px;
+}
+
+#totalPersons {
+    line-height: 43px;
+    font-size: 2rem;
+    text-align: right;
+    color: hsl(172, 67%, 45%);
+    font-weight: bold;
+}
+
+.active {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    width: 100%;
+    line-height: 2rem;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
