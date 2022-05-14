@@ -129,7 +129,7 @@ button {
     margin-bottom: 20px;
     display: flex;
     flex-flow: column wrap;
-    height: 43px;
+    height: 45px;
 }
 
 .total div:nth-of-type(2) {
@@ -151,7 +151,7 @@ button {
     margin-bottom: 20px;
     display: flex;
     flex-flow: column wrap;
-    height: 43px;
+    height: 45px;
 }
 
 #totalPersons {
@@ -162,9 +162,16 @@ button {
     font-weight: bold;
 }
 
-.active {
+#customValue[class='active'] {
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
+}
+
+.hidden {
+    display: none;
+}
+.visible {
+    display: block;
 }
 
 .attribution { 
