@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/Rubik/Rubik-VariableFont_wght.ttf');
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    font-family: 'Rubik';
+    position: relative;
+    background: hsl(226, 43%, 10%);
+    color: white;
+}
+
+main {
+    margin: auto;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    width: 300px;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+    float: left;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.wrap {
+    padding: 20px;
+    /* height: 54px; */
+    background: hsl(246, 80%, 60%);
+    border-radius: 10px;
+    color: hsl(236, 100%, 87%);
+}
+
+.period {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    color:  hsl(235, 45%, 61%);
+    font-size: 0.8rem;
+}
+
+.wrap p {
+    line-height: 27px;
+    font-size: 0.8rem;
+}
+
+.wrap h3 {
+    line-height: 27px;
+    font-weight: 100;
+    color: hsl(246, 80%, 95%);;
+}
+
+.period span:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.active {
+    color: white;
+}
+
+.container {
+    background: hsl(235, 46%, 20%);
+    border-radius: 10px;
+}
+
+.top {
+    margin-top: 50px;
+}
+
+.blueContainer {
+    background-color: hsl(235, 46%, 20%);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.dots {
+    background: url('../images/icon-ellipsis.svg') no-repeat center right;
+    width: 50%;
+    height: 5px;
+    display: inline-block;
+    /* background-size: 10%; */
+    cursor: pointer;
+}
+
+.blueContainer div:nth-of-type(1) {
+    display: inline-block;
+    width: 45%;
+    font-size: 0.9rem;
+}
+
+.blueContainer div:nth-of-type(3) {
+    display: inline-block;
+    width: 125px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 100;
+}
+
+.blueContainer div:nth-of-type(4) {
+    display: inline-block;
+    width: 130px;
+    text-align: right;
+    font-size: 0.7rem;
+    color: hsl(235, 45%, 71%);
+}
+
+
+.work {
+    padding-top: 30px;
+    background: url('../images/icon-work.svg') no-repeat, hsl(15, 100%, 70%);
+    background-position: top -10px right 20px;
+    background-size: 20%;
+}
+
+.play {
+    padding-top: 30px;
+    background: url('../images/icon-play.svg') no-repeat, hsl(195, 74%, 62%);
+    background-position: top -10px right 20px;
+    background-size: 20%;
+}
+
+.study {
+    padding-top: 30px;
+    background: url('../images/icon-study.svg') no-repeat, hsl(348, 100%, 68%);
+    background-position: top -10px right 20px;
+    background-size: 20%;
+}
+
+.exercise {
+    padding-top: 30px;
+    background: url('../images/icon-exercise.svg') no-repeat, hsl(145, 58%, 55%);
+    background-position: top right 20px;
+    background-size: 20%;
+}
+
+.social {
+    padding-top: 30px;
+    background: url('../images/icon-social.svg') no-repeat, hsl(264, 64%, 52%);
+    background-position: top -15px right 20px;
+    background-size: 20%;
+}
+
+.selfcare {
+    padding-top: 30px;
+    background: url('../images/icon-self-care.svg') no-repeat, hsl(43, 84%, 65%);
+    background-position: top -10px right 20px;
+    background-size: 15%;
+}
+
+@media (min-width:50rem) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+        width: 700px;
+        height: 300px;
+        flex-flow: column wrap;
+        
+    }
+    .top {
+        margin: 0;
+        height: 100%;
+    }
+    .wrap {
+        display: flex;
+        flex-direction: column;
+    }
+    .period {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .container {
+        width: 25%;
+    }
+    .top {
+        height: 100%;
+        width: 20%;
+    }
+    .blueContainer div:nth-of-type(4) {
+        text-align: left;
+    }
+    .blueContainer div:nth-of-type(1) {
+        font-size: 0.7rem;
+    }
+    .dots {
+        background-size: 20%;
+    }
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center; 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 2rem;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}

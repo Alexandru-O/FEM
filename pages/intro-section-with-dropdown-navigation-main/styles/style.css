@@ -23,7 +23,8 @@ body {
     font-family: 'Epilogue',sans-serif;
     position: relative;
     text-align: center;
-    background-color: hsl(0, 0%, 90%);
+    background-color: hsl(0, 0%, 95%);
+    overflow: hidden;
 }
 
 .logo {
@@ -108,7 +109,7 @@ section button {
 section button:hover {
     
     color: hsl(0, 0%, 8%);
-    background-color: hsl(0, 0%, 90%);
+    background-color: hsl(0, 0%, 95%);
     border: 1px solid hsl(0, 0%, 8%);
 }
 
@@ -223,19 +224,30 @@ ul {
 }
 
 .navbar {
-    display: none;
-    z-index: 4;
-    background-color: hsl(0, 0%, 90%);
+    /* display: none; */
+    z-index: 1;
+    background-color: hsl(0, 0%, 98%);
     position: absolute;
-    right: 0;
     height: 100vh;
-    width: 200px;
+    width: 250px;
     color: hsl(0, 0%, 41%);
+<<<<<<< HEAD
     font-size: 0.8rem;
     font-weight: 500;
     box-shadow: 0 0 10px grey;
     /* transform: translate(-50%); */
     /* transition: transform 0.5s ease-in-out; */
+=======
+    font-size: 1.1rem;
+    font-weight: 300;
+    top: 0;
+    right: -250px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    transform: translateX(-250px);
+>>>>>>> 033dcce7c62aa41f40e4608256692211fbc153a4
 }
 
 .navbar button {
@@ -245,14 +257,27 @@ ul {
     color: hsl(0, 0%, 41%);
     cursor: pointer;
     margin: 10px 30px;
-    font-weight: 500
+    font-size: 1.1rem;
+    font-weight: 300;
 }
 
 #registerBtn {
     border: 2px solid hsl(0, 0%, 41%);
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 10px;;
 
+}
+
+.greyWrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: hsl(0, 0%, 10%);
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    display: none;
+    z-index: 1;
 }
 
 .submenu {
@@ -320,11 +345,18 @@ ul {
         height: 40px;
         margin-top: 20px;
         display: flex;
+<<<<<<< HEAD
         box-shadow: none;
+=======
+        right: 0;
+        font-size: 0.9rem;
+        background-color: hsl(0, 0%, 95%);
+>>>>>>> 033dcce7c62aa41f40e4608256692211fbc153a4
     }
     .navbar button {
         width: 100px;
         margin: 0;
+        font-size: 0.9rem;
     }
     #loginBtn {
         margin-left: auto;
