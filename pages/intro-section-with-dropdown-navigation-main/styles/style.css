@@ -333,13 +333,7 @@ ul {
         height: 40px;
         margin-top: 20px;
         display: flex;
-<<<<<<< HEAD
         box-shadow: none;
-=======
-        right: 0;
-        font-size: 0.9rem;
-        background-color: hsl(0, 0%, 95%);
->>>>>>> 033dcce7c62aa41f40e4608256692211fbc153a4
     }
     .navbar button {
         width: 100px;
