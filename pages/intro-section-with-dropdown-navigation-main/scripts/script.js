@@ -5,6 +5,8 @@ const navbarClose = document.querySelector('.closeIcon');
 const navbar = document.querySelector('.navbar');
 const greyWrap = document.querySelector('.greyWrap');
 
+// CLICK INPUTS
+
 window.addEventListener('click' , (e) => {
 
     for (const menuItem of menuItems) {
@@ -17,6 +19,8 @@ window.addEventListener('click' , (e) => {
     }
     
 });
+
+// HAMB OPEN AND CLOSE
 
 navbarOpen.addEventListener('click', () => {
     navbar.classList.toggle('slide');
