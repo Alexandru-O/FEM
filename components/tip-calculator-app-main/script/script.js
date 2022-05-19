@@ -22,7 +22,6 @@ for ( const tip of tips ) {
         if ( e.target.id == 'customDiv' ) {
             console.log(e.target.lastElementChild);
             e.target.textContent = '';
-            
         } else {
             tips.forEach(tip => tip.classList.remove('active'));
             e.target.classList.add('active');

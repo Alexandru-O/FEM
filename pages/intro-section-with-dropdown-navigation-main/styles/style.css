@@ -223,11 +223,15 @@ ul {
     height: 100vh;
     width: 250px;
     color: hsl(0, 0%, 41%);
-    font-size: 0.8rem;
-    font-weight: 500;
-    box-shadow: 0 0 10px grey;
-    /* transform: translate(-50%); */
-    /* transition: transform 0.5s ease-in-out; */
+    font-size: 1.1rem;
+    font-weight: 300;
+    top: 0;
+    right: -250px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    transform: translateX(-250px);
 }
 
 .navbar button {
@@ -325,7 +329,9 @@ ul {
         height: 40px;
         margin-top: 20px;
         display: flex;
-        box-shadow: none;
+        right: 0;
+        font-size: 0.9rem;
+        background-color: hsl(0, 0%, 95%);
     }
     .navbar button {
         width: 100px;
