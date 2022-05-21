@@ -167,9 +167,10 @@ button {
     color: hsl(183, 100%, 15%);
 }
 
-#customValue[class='active'] {
+#customValue[class~='active'] {
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
+    margin: 0;
 }
 
 .hidden {

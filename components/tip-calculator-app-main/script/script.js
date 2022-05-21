@@ -8,24 +8,25 @@ const totalAmount = document.querySelector('#tipAmountValue');
 const totalPerson = document.querySelector('#totalPersons');
 const resetBtn = document.querySelector('#resetBtn');
 let tipValue = 0;
+let tipPersonValue = 0;
 
 // CUSTOM TIP VALUE
 // customDiv.addEventListener('click', () => {
 //     customPara.classList.toggle('hidden');
 //     customValue.classList.toggle('visible');
 //     customPara.classList.remove('active');
-    
 // });
 
 for ( const tip of tips ) {
     tip.addEventListener('click' , (e) => {
         if ( e.target.id == 'customDiv' ) {
-            e.target.textContent = '';
+            customValue.classList.add('visible');
         } else {
             tips.forEach(tip => tip.classList.remove('active'));
             e.target.classList.add('active');
             tipValue = e.target.textContent.replace('%','');
             tipAmount();
+            total();
         }
     });
 }
@@ -33,6 +34,7 @@ for ( const tip of tips ) {
 // WHEN RECIVING INPUTS
 window.addEventListener('input', (evt) => {
     tipAmount();
+    total();
 });
 
 // RESET 
@@ -41,16 +43,19 @@ resetBtn.addEventListener('click', () => {
 });
 
 function tipAmount() {
-    console.log(bill.value);
     if ( bill.value > 0 && tipValue > 0 && people.value > 0 ) {
-        totalAmount.textContent = `$${parseInt(bill.value) * parseInt(tipValue) / 100 / parseInt(people.value)}`;
+        totalAmount.textContent = `$${(parseFloat(bill.value) * parseFloat(tipValue) / 100 / parseFloat(people.value)).toFixed(2)}`;
+        tipPersonValue = (parseFloat(bill.value) * parseFloat(tipValue) / 100 / parseFloat(people.value)).toFixed(2);
     } else {
         totalAmount.textContent = '$0.00';
     }
 }
-function total(bill,tip,people) {
-    if  ( bill > 0 && people > 0 )
-        return bill/people;
+function total() {
+    if  ( bill.value > 0 && people.value > 0 ) {
+        totalPerson.textContent = `$${(parseFloat(bill.value) / parseFloat(people.value) + parseFloat(tipPersonValue) ).toFixed(2)}`;
+    } else {
+        totalPerson.textContent = '$0.00';
+    }
 }
 function reset() {
     bill.value = '';
