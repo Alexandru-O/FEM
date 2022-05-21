@@ -57,7 +57,7 @@ input[type=number] {
     text-align: right;
     padding: 0 20px 0 40px;
     font-family: 'Space_Mono';
-    /* outline: none; */
+    outline: none;
     margin: 10px 0 30px 0;
 }
 
@@ -167,10 +167,15 @@ button {
     color: hsl(183, 100%, 15%);
 }
 
-#customValue[class~='active'] {
-    background-color: hsl(172, 67%, 45%);
+#customValue[class~='visible'] {
+    outline: none;
     color: hsl(183, 100%, 15%);
     margin: 0;
+    height: 47.5px;
+}
+#customDiv {
+    padding: 0;
+    line-height: 47.5px;
 }
 
 .hidden {
@@ -189,4 +194,10 @@ button {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width:40rem) {
+    .media {
+
+    }
 }

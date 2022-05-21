@@ -20,7 +20,18 @@ let tipPersonValue = 0;
 for ( const tip of tips ) {
     tip.addEventListener('click' , (e) => {
         if ( e.target.id == 'customDiv' ) {
-            customValue.classList.add('visible');
+            e.target.lastElementChild.addEventListener('keydown', (evt) => {
+                if ( evt.key == 'Escape') {
+                    customValue.classList.toggle('visible');
+                }
+            });
+            
+            if ( e.target.firstChild.textContent == '' )
+                e.target.firstChild.textContent = 'Custom';
+            else
+                e.target.firstChild.textContent = '';
+
+            customValue.classList.toggle('visible');
         } else {
             tips.forEach(tip => tip.classList.remove('active'));
             e.target.classList.add('active');
