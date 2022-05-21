@@ -162,7 +162,7 @@ button {
     font-weight: bold;
 }
 
-.active[class='tip'] {
+.active[class~='tip'] {
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
 }

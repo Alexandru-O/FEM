@@ -5,9 +5,9 @@ const customDiv = document.querySelector('#customDiv');
 const customPara = document.querySelector('#customDiv span');
 const customValue = document.querySelector('#customValue');
 const totalAmount = document.querySelector('#tipAmountValue');
-const totalPeron = document.querySelector('#totalPersons');
+const totalPerson = document.querySelector('#totalPersons');
+const resetBtn = document.querySelector('#resetBtn');
 let tipValue = 0;
-
 
 // CUSTOM TIP VALUE
 // customDiv.addEventListener('click', () => {
@@ -20,28 +20,42 @@ let tipValue = 0;
 for ( const tip of tips ) {
     tip.addEventListener('click' , (e) => {
         if ( e.target.id == 'customDiv' ) {
-            console.log(e.target.lastElementChild);
             e.target.textContent = '';
         } else {
             tips.forEach(tip => tip.classList.remove('active'));
             e.target.classList.add('active');
             tipValue = e.target.textContent.replace('%','');
+            tipAmount();
         }
     });
 }
 
 // WHEN RECIVING INPUTS
 window.addEventListener('input', (evt) => {
-    totalAmount.textContent = `$${tipAmount(parseInt(bill.value), parseInt(tipValue), parseInt(people.value))}`;
-})
+    tipAmount();
+});
 
-function tipAmount(bill,tip,people) {
-    if ( bill > 0 && tip > 0 && people > 0 ) {
-        console.log(bill * tip);
-        return bill * tip / 100 / people;   
+// RESET 
+resetBtn.addEventListener('click', () => {
+    reset();
+});
+
+function tipAmount() {
+    console.log(bill.value);
+    if ( bill.value > 0 && tipValue > 0 && people.value > 0 ) {
+        totalAmount.textContent = `$${parseInt(bill.value) * parseInt(tipValue) / 100 / parseInt(people.value)}`;
+    } else {
+        totalAmount.textContent = '$0.00';
     }
 }
 function total(bill,tip,people) {
     if  ( bill > 0 && people > 0 )
         return bill/people;
+}
+function reset() {
+    bill.value = '';
+    tips.forEach(tip => tip.classList.remove('active'));
+    people.value = '';
+    totalAmount.textContent = '$0.00';
+    totalPerson.textContent = '$0.00';
 }
