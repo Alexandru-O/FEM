@@ -20,16 +20,16 @@ let tipPersonValue = 0;
 for ( const tip of tips ) {
     tip.addEventListener('click' , (e) => {
         if ( e.target.id == 'customDiv' ) {
+            e.target.firstChild.textContent = '';
             e.target.lastElementChild.addEventListener('keydown', (evt) => {
                 if ( evt.key == 'Escape') {
-                    customValue.classList.toggle('visible');
+                    customValue.classList.toggle('visible',false);
+                    e.target.firstChild.textContent = 'Custom';
                 }
             });
-            
-            if ( e.target.firstChild.textContent == '' )
-                e.target.firstChild.textContent = 'Custom';
-            else
-                e.target.firstChild.textContent = '';
+            customValue.addEventListener('input', () => {
+                tipValue = customValue.value;
+            });
 
             customValue.classList.toggle('visible');
         } else {
