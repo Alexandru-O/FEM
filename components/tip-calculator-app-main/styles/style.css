@@ -199,7 +199,46 @@ button {
 }
 
 @media (min-width:40rem) {
-    .media {
-
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    main {
+        width: 800px;
+        min-height: 370px;
+        display: flex;
+        gap: 20px;
+        border-radius: 20px;
+    }
+    .input {
+        width: 390px;
+        height: 370px;
+    }
+    .result {
+        width: 390px;
+        height: 370px;
+    }
+    .tip {
+        width: calc((100% - 40px) / 3);
+    }
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    header {
+        position: absolute;
+        top:30px;
+        width: 100%;
+    }
+    .result {
+        position: relative;
+    }
+    #resetBtn {
+        position: absolute;
+        bottom: 20px;
+        width: calc(100% - 40px);
     }
 }

@@ -72,6 +72,7 @@ function reset() {
     bill.value = '';
     tips.forEach(tip => tip.classList.remove('active'));
     people.value = '';
+    customValue.value = '';
     totalAmount.textContent = '$0.00';
     totalPerson.textContent = '$0.00';
 }
