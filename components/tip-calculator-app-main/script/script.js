@@ -27,7 +27,7 @@ for ( const tip of tips ) {
                     e.target.firstChild.textContent = 'Custom';
                 }
             });
-            customValue.addEventListener('input', () => {
+                customValue.addEventListener('input', () => {
                 tipValue = customValue.value;
             });
 
@@ -36,6 +36,10 @@ for ( const tip of tips ) {
             tips.forEach(tip => tip.classList.remove('active'));
             e.target.classList.add('active');
             tipValue = e.target.textContent.replace('%','');
+            if (e.target.id !== 'customValue') {
+                customValue.classList.toggle('visible',false);
+                customDiv.firstChild.textContent = 'Custom';
+            }
             tipAmount();
             total();
         }
@@ -73,6 +77,8 @@ function reset() {
     tips.forEach(tip => tip.classList.remove('active'));
     people.value = '';
     customValue.value = '';
+    customValue.classList.toggle('visible',false);
+    customDiv.firstChild.textContent = 'Custom';
     totalAmount.textContent = '$0.00';
     totalPerson.textContent = '$0.00';
 }
