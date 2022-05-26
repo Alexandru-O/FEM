@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'DM';
+    src: url('../fonts/DM_Sans/DMSans-Regular.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: hsl(27, 66%, 92%);
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'DM', sans-serif;
+}
+
+header {
+    width: 18rem;
+    background: url('../images/logo.svg') no-repeat right 20px center hsl(10, 79%, 65%);
+    padding: 20px;
+    border-radius: 10px;
+    color: hsl(33, 100%, 98%);
+}
+
+main {
+    background-color: hsl(33, 100%, 98%);
+    width: 18rem;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    margin: 0;
+    color: hsl(25, 47%, 15%);
+}
+
+.chart {
+    height: 250px;
+    display: flex;
+    color: hsl(28, 10%, 53%);
+    font-size: 0.8rem;
+    /* gap: 10px; */
+    align-items: flex-end;
+}
+
+.chart div {
+    text-align: center;
+    flex:2;
+    margin-bottom: 10px;
+}
+
+.chartDiv {
+    background: hsl(10, 79%, 65%) bottom;
+    border-radius: 5px;
+    margin: 0 5px 10px 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.max {
+    background-color: hsl(186, 34%, 60%);
+}
+
+.chartDiv:hover {
+    filter: opacity(0.7);
+}
+
+canvas {
+    height: 200px;
+}
+
+.line {
+    height: 2px;
+    background-color: hsl(27, 66%, 92%);
+}
+
+.info {
+
+}
+
+.totalLeft {
+    float: left;
+    text-align: left;
+    padding-top: 20px;
+    color: hsl(28, 10%, 53%);
+    height: 65px;
+}
+
+.totalLeft div:nth-of-type(2) {
+    color: hsl(25, 47%, 15%);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.totalRight {
+    float: right;
+    text-align: right;
+    padding-top: 20px;
+    height: 65px;
+    color: hsl(25, 47%, 15%);
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.totalRight div:nth-of-type(2) {
+    color: hsl(28, 10%, 53%);
+    font-weight: normal;
+}
+
+header div:nth-of-type(2) {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-top: 10px;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: absolute;
+    bottom: 0;
+    line-height: 2rem;
+    width: 100%;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
