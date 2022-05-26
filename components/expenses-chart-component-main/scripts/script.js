@@ -8,11 +8,15 @@ async function getJson(url) {
         .then(days=> {
             for (let i = 0  ; i < 7 ; i++) {
                 totalValue += days[i].amount;   
-                Math.max(...days.map(obj => obj.amount))
 
                 const dayDiv = document.createElement('div');
                 chart.appendChild(dayDiv);
 
+                // AMOUNT INFO
+                const amountDiv = document.createElement('div');
+                amountDiv.classList.add('amountDiv');
+                amountDiv.textContent = `$${days[i].amount}`;
+                dayDiv.appendChild(amountDiv);
                 // BAR CHART
                 const chartDiv = document.createElement('div');
                 chartDiv.classList.add('chartDiv');
@@ -25,12 +29,10 @@ async function getJson(url) {
                 textDiv.innerHTML = days[i].day;
                 dayDiv.appendChild(textDiv);
             }
-            // GET MAX
             
         })
         .catch(console.error);
     totalDiv.textContent = `$${totalValue}`;
-    
 }
 
 getJson('./data.json');

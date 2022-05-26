@@ -9,7 +9,7 @@ body {
     box-sizing: border-box;
     background-color: hsl(27, 66%, 92%);
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -39,11 +39,11 @@ h2 {
 }
 
 .chart {
-    height: 250px;
+    min-height: 250px;
     display: flex;
     color: hsl(28, 10%, 53%);
     font-size: 0.8rem;
-    /* gap: 10px; */
+    margin-top: 20px;
     align-items: flex-end;
 }
 
@@ -57,7 +57,6 @@ h2 {
     background: hsl(10, 79%, 65%) bottom;
     border-radius: 5px;
     margin: 0 5px 10px 5px;
-    cursor: pointer;
     position: relative;
 }
 
@@ -65,8 +64,26 @@ h2 {
     background-color: hsl(186, 34%, 60%);
 }
 
-.chartDiv:hover {
-    filter: opacity(0.7);
+/* .chartDiv:hover {
+    filter: opacity(0.8);
+} */
+
+.chart div:hover {
+    cursor: pointer;
+    filter: opacity(0.8);
+}
+
+.chart div:hover .amountDiv {
+    display: block;
+}
+
+.amountDiv {
+    line-height: 1.5rem;
+    font-size: 0.7rem;
+    background-color: hsl(25, 47%, 15%);
+    border-radius: 3px;
+    color: hsl(27, 66%, 92%);
+    display: none;
 }
 
 canvas {
@@ -76,10 +93,6 @@ canvas {
 .line {
     height: 2px;
     background-color: hsl(27, 66%, 92%);
-}
-
-.info {
-
 }
 
 .totalLeft {
