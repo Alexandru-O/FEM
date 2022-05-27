@@ -1,5 +1,54 @@
+* {
+    box-sizing: border-box;
+}
 
+@font-face {
+    font-family: 'Barlow';
+    src: url('../fonts/Barlow/Barlow-Regular.ttf');
+}
 
+@font-face {
+    font-family: 'Fraunces';
+    src: url('../fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf');
+}
 
-.attribution { font-size: 11px; text-align: center; }
+body {
+    margin: 0;
+    font-family: 'Fraunces',sans-serif;
+    position: relative;
+    min-height: 100vh;
+}
+
+header {
+    background:  hsl(213, 9%, 39%);
+}
+
+main {
+    padding-bottom: 10rem;
+}
+
+p {
+    font-family: 'Barlow',sans-serif;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+footer .logo {
+    height: 3rem;
+    width: 100%;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    width: 100%;
+}
 .attribution a { color: hsl(228, 45%, 44%); }
