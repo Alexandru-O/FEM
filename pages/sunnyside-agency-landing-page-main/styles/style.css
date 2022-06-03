@@ -104,6 +104,10 @@ h1, h2, h3, h4 {
     color: hsl(232, 10%, 55%);
 }
 
+.headerNav a:hover {
+    color: hsl(232, 10%, 35%);
+}
+
 .headerNav a:nth-of-type(4) {
     background-color: hsl(51, 100%, 49%);
     padding: 10px 20px;
@@ -408,6 +412,10 @@ article .text {
 }
 
 @media (min-width: 40rem) {
+    body {
+        max-width: 93rem;
+        margin: auto;
+    }
 
     .footerImages {
         display: flex;
@@ -594,14 +602,15 @@ article .text {
     .footerImages .image {
         height: 400px;
     }
-    p {
-        font-size: 0.8rem;
-        font-weight: 300;
-    }
 
     .social {
         padding: 0 40%;
     }
+}
+
+p {
+    font-size: 0.8rem;
+    font-weight: 100;
 }
 
 .hidden {
