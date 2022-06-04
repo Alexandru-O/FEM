@@ -14,6 +14,9 @@
 <body>
   <header>
 
+    <div class="logo"></div>
+    <div class="hamb"></div>
+
     <nav role="navigation" id="headerNav">
       <ul>
 
@@ -43,19 +46,29 @@
         
         <button id="login">Login</button>
         <button id="signup">Sign Up</button>
+        
       </ul>
     </nav>
-
-    <h1>A modern publishing platform</h1>
-    <p>Grow your audience and build your online brand</p>
-
-    <button id="startForFree">Start for Free</button>
-    <button id="learnMore">Learn More</button>
+    <div class="headerInfo">
+      <h1>A modern publishing platform</h1>
+      <p>Grow your audience and build your online brand</p>
+      <div class="headerButtons">
+        <button id="startForFree">Start for Free</button>
+        <button id="learnMore">Learn More</button>
+      </div>
+    </div>
   </header>
 
   <main>
     <section id="topSect">
       <h2>Designed for the future</h2>
+      <div class="animation">
+        <picture>
+          <source media="(min-width: 40rem)" srcset="./images/illustration-editor-desktop.svg">
+          <source media="(max-width: 39rem)" srcset="./images/illustration-editor-mobile.svg">
+          <img src="./images/illustration-editor-mobile.svg" alt="some grapfh">
+        </picture>
+      </div>
       <article>
         <h3>Introducing an extensible editor</h3>
         <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
@@ -71,12 +84,20 @@
     </section>
 
     <section id="middleSect">
-      <h3>State of the Art Infrastructure</h3>
+      <div class="animation"></div>
+      <h2>State of the Art Infrastructure</h2>
       <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
       This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
     </section>
 
     <section id="bottomSect">
+      <div class="animation">
+        <picture>
+          <source media="(min-width: 40rem)" srcset="./images/illustration-laptop-desktop.svg">
+          <source media="(max-width: 40rem)" srcset="./images/illustration-laptop-mobile.svg">
+          <img src="./images/illustration-laptop-mobile.svg" alt="laptop">
+        </picture>
+      </div>
       <article>
         <h3>Free, open, simple</h3>
         <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
@@ -92,7 +113,8 @@
   </main>
 
   <footer>
-    <nav role="navigation" id="bootomNav">
+    <div class="logo"></div>
+    <nav role="navigation" id="bottomNav">
       <ul>
 
         <li><a href="#">Product</a></li>
@@ -119,13 +141,11 @@
             <li><a href="">LinkedIn</a></li>
           </ul>
         
-        <button id="login">Login</button>
-        <button id="signup">Sign Up</button>
       </ul>
     </nav>
 
     <div class="attribution">
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Alexandru-O</a>.
     </div>
   </footer>
 </body>
