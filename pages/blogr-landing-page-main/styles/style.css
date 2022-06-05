@@ -27,6 +27,7 @@ header {
     height: 500px;
     border-bottom-left-radius: 100px;
     text-align: center;
+    position: relative;
 }
 
 .logo {
@@ -42,10 +43,7 @@ header {
     height: 100px;
     background: url('../images/icon-hamburger.svg') no-repeat center right 40px;
     float: right;
-}
-
-#headerNav {
-    display: none;
+    cursor: pointer;
 }
 
 .headerInfo {
@@ -173,6 +171,78 @@ footer .dropdown a{
 footer ul {
     list-style: none;
 }
+
+#headerNav {
+    /* display: none; */
+    position: absolute;
+    width: 250px;
+    left: calc(50% - 125px);
+    top: 150px;
+    background:  hsl(0, 0%, 100%);
+    border-radius: 5px;
+    box-shadow: 0 0 30px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 20px;
+}
+
+#headerNav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+#headerNav li {
+    padding: 10px 0;
+}
+
+#headerNav ul a {
+    text-decoration: none;
+    color: hsl(208, 49%, 24%);
+    font-weight: 700;
+    display: inline-block;
+}
+
+#headerNav .dropdown {
+    display: none;
+    background: hsl(240, 2%, 89%);
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.arrow {
+    display: inline-block;
+    background: url('../images/icon-arrow-dark.svg') no-repeat center;
+    width: 20px;
+    height: 20px;
+}
+
+.line {
+    background-color: hsl(240, 2%, 79%);
+    width: calc(100% - 20px);
+    height: 1px;
+}
+
+#headerNav button {
+    width:fit-content;
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    color: hsl(208, 49%, 24%);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#headerNav #signup {
+    padding: 10px 20px;
+    background: linear-gradient(to right ,hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+    border-radius: 20px;
+    color:  hsl(0, 0%, 100%);
+}
+
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
