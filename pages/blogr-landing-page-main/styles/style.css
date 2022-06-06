@@ -145,9 +145,16 @@ footer a{
     color: hsl(0, 0%, 100%)
 }
 
-footer .dropdown a{
+footer ul a{
     text-decoration: none;
     color: hsl(240, 2%, 79%);
+    font-size: 0.8rem;
+}
+
+#bottomNav>ul>li>a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
 }
 
 #bottomNav {
@@ -172,8 +179,7 @@ footer ul {
     list-style: none;
 }
 
-#headerNav {
-    /* display: none; */
+.headerNav {
     position: absolute;
     width: 250px;
     left: calc(50% - 125px);
@@ -186,31 +192,57 @@ footer ul {
     align-items: center;
     gap: 20px;
     padding: 20px 20px;
+    display: none;
 }
 
-#headerNav ul {
-    list-style: none;
-    padding: 0;
+ul {
     margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu {
     width: 100%;
 }
 
-#headerNav li {
-    margin: 10px 0;
+.dropdown {
+    width: max-content;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: max-content;
 }
 
-#headerNav ul a {
+.headerNav li {
+    margin: 10px auto;
+}
+
+.headerNav ul a {
     text-decoration: none;
     color: hsl(208, 49%, 24%);
     font-weight: 700;
     display: inline-block;
 }
 
-#headerNav .dropdownContent {
-    display: none;
+.dropdownContent {
+    /* display: none; */
     background: hsl(240, 2%, 89%);
     border-radius: 5px;
+
+    height: 0;
+	overflow: hidden;
+    opacity: 0;
+	transition: height 0.4s ease, opacity 0;
+}
+
+.dropdownContent.open {
     padding: 10px 0;
+    height: max-content;
+    transition: height 0.5s ease, opacity 0.5s ease 0.1s;
+    opacity: 1;
 }
 
 .line {
@@ -219,7 +251,7 @@ footer ul {
     height: 1px;
 }
 
-#headerNav button {
+.headerNav button {
     width:fit-content;
     background: transparent;
     border: none;
@@ -229,7 +261,7 @@ footer ul {
     cursor: pointer;
 }
 
-#headerNav #signup {
+.headerNav #signup {
     padding: 10px 20px;
     background: linear-gradient(to right ,hsl(13, 100%, 72%),hsl(353, 100%, 62%));
     border-radius: 20px;
@@ -243,17 +275,17 @@ footer ul {
     background: url('../images/icon-arrow-dark.svg') no-repeat center;
     transition: 0.2s;
     position: absolute;
-    padding: 2px 4px 0px 4px;
 }
 
-.dropbtn::after:hover {
-    transform: rotate(-180deg);
-}
 
 .dropdown:hover .dropbtn::after {
     transform: rotate(-180deg);
 }
 
+.active {
+    display: flex;
+    flex-direction: column;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
