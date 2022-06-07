@@ -101,11 +101,11 @@ main {
 #middleSect {
     background: url('../images/bg-pattern-circles.svg') no-repeat center top -170px, linear-gradient(to left top,hsl(237, 23%, 32%),hsl(237, 17%, 21%));
     background-size: 150%;
-    height: 400px;
+    min-height: 300px;
     color: hsl(0, 0%, 100%);
     position: relative;
     margin-top: 170px;
-    padding: 0 20px;
+    padding: 0 20px 20px 20px;
     border-bottom-left-radius: 70px;
     border-top-right-radius: 70px;
 }
@@ -295,6 +295,16 @@ ul {
     transform: rotate(-180deg);
 }
 
+#learnMore:hover {
+    background: white;
+    color: hsl(355, 100%, 74%);
+}
+#startForFree:hover {
+    border-color: hsl(355, 100%, 74%);
+    background: hsl(355, 100%, 74%);
+    color: white;
+}
+
 
 @media (min-width:40rem) {
     .hamb {
@@ -313,6 +323,8 @@ ul {
     }
     .menu {
         display: flex;
+        width: 400px;
+        gap: 20px;
     }
     .line {
         display: none;
@@ -328,15 +340,30 @@ ul {
     .dropdown {
         position: relative;
     }
+    .dropdownContent.open {
+        width: 100%;
+    }
     .dropdownContent {
         position: absolute;
+        left: 0;
+        top: 20px;
+        background: white;
+        padding: 0 20px;
+        width: 100%;
+    }
+    .dropdownContent li a {
+        color: hsl(207, 13%, 34%);
+    }
+    .dropdownContent li a:hover {
+        color: hsl(240, 10%, 6%);
+    }
+    .active {
+        display: flex;
+        flex-direction: row;
     }
     .headerNav button {
         color: white;
         font-size: 0.8rem;
-    }
-    .menu {
-        width: 300px;
     }
     .headerNav #signup {
         background: white;
@@ -360,18 +387,122 @@ ul {
         display: flex;
         flex-flow: column wrap;
         max-height: 550px;
+        padding: 0;
+        position: relative;
+        text-align: left;
     }
-    .animation {
+
+    #topSect h2 {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        text-align: center;
+    }
+    #topSect .animation {
         width: 50%;
         order: 2;
         background-position:-20px -100px;
+        max-height: 550px;
+        overflow: hidden;
     }
     #topSect article {
+        width: 40%;
+        margin-left: 10%;
+    }
+    #topSect article:nth-of-type(1) {
+        padding-top: 100px;
+    }
+    #topSect .animation img {
+        padding-left: 200px;
+        width: auto;
+        max-height: 100%;
+    }
+    #middleSect {
+        display: flex;
+        flex-flow: column wrap;
+        padding: 0;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    #middleSect .animation {
+        position: absolute;
+        order: 1;
+        height: 450px;
+        left: calc(25% - 250px);
+        top: -60px;
+        background-size: contain;
         width: 50%;
     }
-    .animation img {
-        padding-left: 300px;
+
+    #middleSect h2 {
+        width: 50%;
+        order: 2;
+        padding: 0;
+        text-align: left;
+        padding-left: 30px;
+    } 
+
+    #middleSect p {
+        width: 50%;
+        order: 3;
+        text-align: left;
+        padding-left: 30px;
     }
+    #bottomSect {
+        display: flex;
+        flex-flow: column wrap;
+        padding: 0;
+        height: 550px;
+        margin: 150px 0;
+        justify-content: center;
+    }
+    #bottomSect .animation {
+        width: 50%;
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    #bottomSect .animation img {
+        padding: 0;
+        position: absolute;
+        right: 100px;
+        top: 0;
+        width: auto;
+    }
+    #bottomSect article {
+        width: 50%;
+        text-align: left;
+        padding-right: 200px;
+    }
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 40px;
+    }
+    footer .logo {
+        width: 25%;
+        margin: 0;
+    }
+    #bottomNav {
+        padding: 0;
+        width: 75%;
+    }
+    #bottomNav > ul {
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    
 }
-.attribution { font-size: 11px; text-align: center; }
+.attribution { 
+    font-size: 11px;
+    text-align: center; 
+    width: 100%;
+}
 .attribution a { color: hsl(228, 45%, 44%); }
