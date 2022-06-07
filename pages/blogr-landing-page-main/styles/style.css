@@ -61,13 +61,21 @@ header {
     gap: 20px;
 }
 
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 .headerButtons button {
     background: transparent;
     border: 1px solid white;
     border-radius: 20px;
     padding: 10px 20px;
     color: hsl(0, 0%, 100%);
-    
+    cursor: pointer;
 }
 
 #startForFree {
@@ -195,6 +203,11 @@ footer ul {
     display: none;
 }
 
+.active {
+    display: flex;
+    flex-direction: column;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -206,14 +219,18 @@ ul {
 }
 
 .dropdown {
-    width: max-content;
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
+}
+
+.dropbtn {
     width: max-content;
+    margin: auto;
 }
 
 .headerNav li {
@@ -232,18 +249,15 @@ ul {
     background: hsl(240, 2%, 89%);
     border-radius: 5px;
 
-    height: 0;
+    max-height: 0;
 	overflow: hidden;
-    opacity: 0;
-	transition: height 0.4s ease, opacity 0;
+	transition: max-height 0.5s ease;
 }
 
 .dropdownContent.open {
-    padding: 10px 0;
-    height: max-content;
-    transition: height 0.5s ease, opacity 0.5s ease 0.1s;
-    opacity: 1;
+    max-height: 200px;
 }
+
 
 .line {
     background-color: hsl(240, 2%, 79%);
@@ -277,15 +291,87 @@ ul {
     position: absolute;
 }
 
-
-.dropdown:hover .dropbtn::after {
+.dropdown.active .dropbtn::after {
     transform: rotate(-180deg);
 }
 
-.active {
-    display: flex;
-    flex-direction: column;
-}
 
+@media (min-width:40rem) {
+    .hamb {
+        display: none;
+    }
+    .headerNav {
+        display: flex;
+        flex-direction: row;
+        background: transparent;
+        position: initial;
+        width: calc(100% - 140px);
+        box-shadow: none;
+        border-radius: none;
+        gap: none;
+        height: 100px;
+    }
+    .menu {
+        display: flex;
+    }
+    .line {
+        display: none;
+    }
+    .headerNav ul a {
+        color: white;
+        font-size: 0.8rem;
+    }
+    .dropbtn::after {
+        background: url('../images/icon-arrow-light.svg') no-repeat center;
+        height:0.8rem;
+    }
+    .dropdown {
+        position: relative;
+    }
+    .dropdownContent {
+        position: absolute;
+    }
+    .headerNav button {
+        color: white;
+        font-size: 0.8rem;
+    }
+    .menu {
+        width: 300px;
+    }
+    .headerNav #signup {
+        background: white;
+        color: hsl(356, 100%, 66%);
+        width: 100px;
+        padding: 10px 20px;
+        line-height: 0.8rem;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+        width: calc(100% - 300px);
+    }
+    .headerInfo {
+        padding: 100px 30px 0 30px;
+    }
+    #topSect {
+        display: flex;
+        flex-flow: column wrap;
+        max-height: 550px;
+    }
+    .animation {
+        width: 50%;
+        order: 2;
+        background-position:-20px -100px;
+    }
+    #topSect article {
+        width: 50%;
+    }
+    .animation img {
+        padding-left: 300px;
+    }
+}
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

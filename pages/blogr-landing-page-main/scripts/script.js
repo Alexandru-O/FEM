@@ -9,7 +9,7 @@ hamb.addEventListener('click', () => {
 
 for (const dropdown of dropdowns) {
     dropdown.addEventListener('click', (e) => {
-        // dropdowns.forEach( (e) => console.log(e.nextElementSibling.classList.remove('open')));
-        e.target.parentNode.nextElementSibling.classList.toggle('open');
+        e.target.parentNode.classList.toggle('active');
+        e.target.nextElementSibling.classList.toggle('open');
     });
 }
