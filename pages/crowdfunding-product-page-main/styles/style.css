@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Commissioner';
+    src: url('../fonts/Commissioner/Commissioner-VariableFont_wght.ttf');
+}
+
+body {
+    font-family: 'Commissioner',sans-serif;
+    margin: 0;
+    background :hsl(0, 0%, 95%);
+}
+
+p {
+    color: hsl(0, 0%, 48%);
+    font-size: 0.8rem;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+.nav {
+    display: none;
+}
+
+header {
+    background: url('../images/image-hero-mobile.jpg') no-repeat center ;
+    height: 250px;
+    background-size: cover;
+}
+
+.logo {
+    background: url('../images/logo.svg') no-repeat center left 20px;
+    width: 50%;
+    height: 50px;
+    float: left;
+}
+
+.hamb {
+    background: url('../images/icon-hamburger.svg') no-repeat center right 20px;
+    width: 50%;
+    height: 50px;
+    float: right;
+    cursor: pointer;
+}
+
+main {
+    background :transparent;
+    margin: 0 20px;
+    position: relative;
+    top: -40px;
+    text-align: center;
+}
+
+.topSection {
+    background: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.illustration {
+    background: url('../images/logo-mastercraft.svg') no-repeat center;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: -30px;
+    left: calc(50% - 30px);
+}
+
+h1 {
+    padding-top: 20px;
+    font-size: 1.4rem;
+}
+
+button {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    border: none;
+    background-color: hsl(176, 50%, 47%);
+    padding: 15px 35px;
+    border-radius: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookmarkBtn {
+    background: url('../images/icon-bookmark.svg') no-repeat center;
+    height: 60px;
+    width: 60px;
+    
+}
+
+.infoSection {
+    margin-top: 20px;
+    background: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    padding: 30px 20px;
+}
+
+.topValue {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.bottomValue {
+    color: hsl(0, 0%, 48%);
+    font-size: 0.7rem;
+    line-height: 1.7rem;
+}
+
+.line {
+    height: 1px;
+    background-color: hsl(0, 0%, 80%);
+    width: 80px;
+    margin: 20px auto;
+}
+
+.progressBar {
+    background-color: hsl(0, 0%, 95%);
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.progressAmount {
+    background-color: hsl(176, 50%, 47%);
+    height: 100%;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.mainSection {
+    margin-top: 20px;
+    background: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    padding: 30px 20px;
+
+    text-align: left;
+    line-height: 1.4rem;
+}
+
+.mainSection>p {
+    margin-top: 25px;
+}
+
+
+
+@media (min-width: 40rem) {
+    header {
+        background: url('../images/image-hero-desktop.jpg');
+    }
+    
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
