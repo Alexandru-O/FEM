@@ -89,6 +89,7 @@ main {
     top: -60px;
     text-align: center;
     max-width: 43rem;
+    z-index: 1;
 }
 
 .topSection {
@@ -179,11 +180,14 @@ button:hover {
     line-height: 1.7rem;
 }
 
-.line {
+article .line {
     height: 1px;
     background-color: hsl(0, 0%, 80%);
-    width: 80px;
-    margin: 20px auto;
+    min-width:0;
+    width:0%;
+    margin:0;  
+    transition:width 1.5s, margin 1s ease;
+    text-align: center;
 }
 
 .progressBar {
@@ -215,9 +219,13 @@ button:hover {
 
 article {
     border: 1px solid hsl(0, 0%, 88%);
-    padding: 20px 0;
+    padding-top: 20px;
     border-radius: 10px;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .mainSection article {
@@ -242,6 +250,7 @@ article {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .bottomArticle p:nth-of-type(1) {
@@ -275,7 +284,21 @@ article {
     border-radius: 10px;
     padding: 20px;
     text-align: left;
+    z-index: 3;
     display: none;
+}
+
+.modal h4 {
+    float: left;
+    width: 50%;
+}
+
+.modal .closeBtn {
+    background: url('../images/icon-close-modal.svg') no-repeat right;
+    width: 50%;
+    height: 19.333px;
+    float: right;
+    cursor: pointer;
 }
 
 .radioLeft {
@@ -375,7 +398,7 @@ button {
     content: "\0024";
     position: absolute;
     left: 20px;
-    top: 12px;
+    line-height: 47px;
     color: grey;
     width: 10px;
 }
@@ -388,16 +411,17 @@ button {
     width: 110px;
 }
 
-article .line {
-    width: 100%;
-}
-
 .top {
-    padding: 0 20px;
+    padding: 0 20px 20px 20px;
 }
 
 .bottom {
+    width: 100%;
     padding: 0 20px;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 0;
+    transition: height 1.5s, margin-bottom 2s ease;
 }
 
 .modalTy {
@@ -430,6 +454,48 @@ article .line {
     height: 65px;
 }
 
+.greyWrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: hsl(0, 0%, 10%);
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    display: none;
+    z-index: 2;
+}
+
+.title {
+    width: 100%;
+}
+
+.active {
+    display: initial;
+}
+
+article .active {
+    display: block;
+}
+
+article .line.active {
+    width:100% !important;
+    margin-bottom: 20px;
+}
+
+.bottom.active {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.greenBorder {
+    border: 1px solid hsl(176, 50%, 47%);
+}
+
+.foreground {
+    backdrop-filter: blur(10px);
+}
+
 @media (min-width: 43rem) {
     header {
         background: url('../images/image-hero-desktop.jpg') no-repeat center;
@@ -450,6 +516,7 @@ article .line {
         height: 50px;
         width: 1px;
         margin: 0;
+        background-color: hsl(0, 0%, 80%);
     }
     .progressBar {
         width: 100%;
@@ -496,19 +563,31 @@ article .line {
     .top p, .top .quantity {
         padding-left: 40px;
     }
+    .hamb {
+        display: none;
+    }
+    .nav {
+        display: initial;
+        position: initial;
+    }
+    .dropdown {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .dropdown a {
+        color: white;
+        font-size: 0.9rem;
+    }
+    li {
+        border: none;
+    }
+    .bottom.active {
+        height: 50px;
+        margin-bottom: 20px;
+    }
 }
 
-.active {
-    display: initial;
-}
 
-.greenBorder {
-    border: 1px solid hsl(176, 50%, 47%);
-}
-
-.foreground {
-    backdrop-filter: blur(10px);
-}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
