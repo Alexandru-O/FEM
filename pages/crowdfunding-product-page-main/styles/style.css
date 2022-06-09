@@ -11,6 +11,10 @@ body {
     font-family: 'Commissioner',sans-serif;
     margin: 0;
     background :hsl(0, 0%, 95%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 p {
@@ -24,12 +28,43 @@ h1, h2, h3, h4, h5 {
 
 .nav {
     display: none;
+    background-color: white;
+    width: 300px;
+    border-radius: 10px;
+    position: absolute;
+    top: 80px;
+    left: calc(50% - 155px);
 }
 
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    border-bottom: 1px solid hsl(0, 0%, 90%);
+    padding: 15px 30px;
+}
+
+li:nth-of-type(3) {
+    border: none;
+}
+ 
+li a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 1.1rem;
+    line-height: 30px;
+    font-weight: 500;
+}
 header {
     background: url('../images/image-hero-mobile.jpg') no-repeat center ;
-    height: 250px;
+    height: 400px;;
     background-size: cover;
+    width: 100%;
 }
 
 .logo {
@@ -51,8 +86,9 @@ main {
     background :transparent;
     margin: 0 20px;
     position: relative;
-    top: -40px;
+    top: -60px;
     text-align: center;
+    max-width: 43rem;
 }
 
 .topSection {
@@ -87,18 +123,42 @@ button {
     border-radius: 30px;
 }
 
+button:hover {
+    background-color: hsl(176, 72%, 28%);
+}
+
 .buttons {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 .bookmarkBtn {
-    background: url('../images/icon-bookmark.svg') no-repeat center;
-    height: 60px;
-    width: 60px;
-    
+    height: 56px;
+    width: 56px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    transition: width 1s ease;
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 30px;
+}
+
+.svgCircle.active {
+    fill: hsl(176, 50%, 47%);
+}
+
+.svgMiddle.active {
+    fill: white;
+}
+
+.bookmarkBtn p {
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: 0;
+    background: transparent;
 }
 
 .infoSection {
@@ -145,7 +205,6 @@ button {
     background: hsl(0, 0%, 100%);
     border-radius: 10px;
     padding: 30px 20px;
-
     text-align: left;
     line-height: 1.4rem;
 }
@@ -159,6 +218,10 @@ article {
     padding: 20px 0;
     border-radius: 10px;
     margin-top: 20px;
+}
+
+.mainSection article {
+    padding: 20px 20px;
 }
 
 .greenText {
@@ -205,18 +268,19 @@ article {
 
 .modal {
     position: absolute;
+    top: -200px;
     left: 0;
     background: white;
-    top: -80px;
-    max-width: 500px;
+    max-width: 690px;
     border-radius: 10px;
     padding: 20px;
     text-align: left;
+    display: none;
 }
 
 .radioLeft {
     float: left;
-    width: 30px;
+    width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
@@ -282,7 +346,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .greyText {
@@ -294,21 +358,24 @@ button {
 .pledgeAmount {
     appearance: textfield;
     border: 1px solid hsl(0, 0%, 80%);
-    width: 90px;
+    width: 100px;
     height: 47px;
     border-radius: 30px;
     font-weight: 700;
-    padding-left: 45px;
+    padding-left: 35px;
     outline: 0 none;
 }
 
 .pledgeAmountDiv {
-    width: 115px;
+    width: 100px;
+    position: relative;
 }
+
 .pledgeAmountDiv::before {
     content: "\0024";
-    position: relative;
-    right: -40px;
+    position: absolute;
+    left: 20px;
+    top: 12px;
     color: grey;
     width: 10px;
 }
@@ -333,11 +400,114 @@ article .line {
     padding: 0 20px;
 }
 
-@media (min-width: 40rem) {
+.modalTy {
+    position: fixed;
+    background-color: white;
+    /* height: 330px; */
+    top: calc(50% - 150px);
+    left: calc(50% - 160px);
+    width: 320px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    display: none;
+}
+
+.modalTy p{
+    line-height: 1.5rem;
+}
+
+.modalTy button {
+    width: 120px;
+    margin-top: 20px;
+}
+
+.modalTy h3 {
+    margin: 20px 0;
+}
+
+.tyLogo {
+    background: url('../images/icon-check.svg') no-repeat center;
+    height: 65px;
+}
+
+@media (min-width: 43rem) {
     header {
-        background: url('../images/image-hero-desktop.jpg');
+        background: url('../images/image-hero-desktop.jpg') no-repeat center;
     }
-    
+    .topSection {
+        padding: 30px 30px ;
+    }
+    .modal {
+        padding: 30px 30px ;
+    }
+    .infoSection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 30px 30px;
+    }
+    .infoSection .line {
+        height: 50px;
+        width: 1px;
+        margin: 0;
+    }
+    .progressBar {
+        width: 100%;
+    }
+    .mainSection {
+        padding: 30px 30px;
+    }
+    .bookmarkBtn {
+        width: 160px;
+    }
+
+    .bookmarkBtn .svgBookmark {
+        width: 56px;
+    }
+
+    .bookmarkBtn p {
+        width: calc( 100% - 56px);
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 30rem) {
+    .greyText {
+        width: auto;
+        line-height: 47px;
+        text-align: left;
+    }
+    .pledgeAmountDiv {
+        margin-left: auto;
+    }
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+    }
+    .radioRight {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        line-height: 40px;
+        gap: 20px;
+    }
+    .top p, .top .quantity {
+        padding-left: 40px;
+    }
+}
+
+.active {
+    display: initial;
+}
+
+.greenBorder {
+    border: 1px solid hsl(176, 50%, 47%);
+}
+
+.foreground {
+    backdrop-filter: blur(10px);
 }
 
 .attribution { font-size: 11px; text-align: center; }
