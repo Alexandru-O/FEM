@@ -2,7 +2,7 @@
 const hamb = document.querySelector('.hamb');
 const nav = document.querySelector('.nav');
 const body = document.querySelector('body');
-const greyWrap = document.querySelector('.greyWrap');
+const greyWraps = document.querySelectorAll('.greyWrap');
 
 hamb.addEventListener('click', () => {
     nav.classList.toggle('active');
@@ -15,7 +15,9 @@ const modal = document.querySelector('.modal');
 const backThisProject = document.querySelector('.buttons button');
 backThisProject.addEventListener('click', () => {
     modal.classList.toggle('active');
-    greyWrap.classList.toggle('active',true);
+    greyWraps.forEach(greyWrap => {
+        greyWrap.classList.add('active');
+    });
 });
 
 // if one backing opt. is selected then: 
@@ -40,8 +42,41 @@ const closeBtn = document.querySelector('.closeBtn');
 
 closeBtn.addEventListener('click', () => {
     modal.classList.remove('active');
-    greyWrap.classList.remove('active');
+    greyWraps.forEach(greyWrap => {
+        greyWrap.classList.remove('active');
+    });
 }); 
 
 
+const continueBtns = document.querySelectorAll('.continueBtn');
+const modalTy = document.querySelector('.modalTy');
+for (const continueBtn of continueBtns) {
+    continueBtn.addEventListener('click', () => {
+        modalTy.classList.add('active');
+        modal.classList.remove('active');
+    });
+}
+
+const buttonGotIt = document.querySelector('.modalTy button');
+buttonGotIt.addEventListener('click', () => {
+    modalTy.classList.remove('active');
+    greyWraps.forEach(greyWrap => {
+        greyWrap.classList.remove('active');
+    });
+});
+
+const bookmarkBtn = document.querySelector('.bookmarkBtn');
+const svgCircle = document.querySelector('.svgCircle');
+const svgMiddle = document.querySelector('.svgMiddle');
+const bookmarkText = document.querySelector('.bookmarkBtn p');
+
+bookmarkBtn.addEventListener('click', () => {
+    svgCircle.classList.toggle('active');
+    svgMiddle.classList.toggle('active');
+    bookmarkText.classList.toggle('green');
+    if (bookmarkText.textContent == 'Bookmark')
+        bookmarkText.textContent = 'Bookmarked';
+    else
+        bookmarkText.textContent = 'Bookmark';
+});
     
