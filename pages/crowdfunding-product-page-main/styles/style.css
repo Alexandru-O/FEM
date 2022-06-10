@@ -309,10 +309,6 @@ article {
     filter: opacity(0.5);
 }
 
-.modal article:nth-of-type(4) input {
-    
-}
-
 .greyWrap {
     position: fixed;
     top: 0;
