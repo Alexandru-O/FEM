@@ -20,28 +20,35 @@
   </header>
 
   <main>
-    <p>100k Pageviews</p>
-    <input type="range" name="amount" id="amount" list="stepList" min="1" max="5" step="1">
-    <datalist id="stepList">
-      <option value="8">8</option>
-      <option value="12">12</option>
-      <option value="16">16</option>
-      <option value="24">24</option>
-      <option value="36">36</option>
-    </datalist>
-    <p>$16.00 /month</p>
-
-    <p>Monthly Billing</p>
-    <input type="checkbox" name="switch" id="switch">
-    <p>Yearly Billing <span>25% discount</span></p>
-
+    <div class="topSection">
+      <h4>100K PAGEVIEWS</h4>
+      <input type="range" name="amount" id="amount" list="stepList" min="1" max="5" step="1">
+      <datalist id="stepList">
+        <option value="8">8</option>
+        <option value="12">12</option>
+        <option value="16">16</option>
+        <option value="24">24</option>
+        <option value="36">36</option>
+      </datalist>
+      <div class="price">
+        <p>$16.00 <span>/month</span></p>
+      </div>
+      <div class="billing">
+        <p>Monthly Billing</p>
+        <input type="checkbox" name="toggle" id="toggle" class="checkbox">
+        <label for="toggle" class="switch"></label>
+        <p>Yearly Billing <span>25%</span></p>
+      </div>
+    </div>
     <div class="line"></div>
-
-    <p>Unlimited websites</p>
-    <p>100% data ownership</p>
-    <p>Email reports</p>
-
-    <button>Start my trial</button>
+    <div class="bottomSection">
+      <div class="left">
+        <p>Unlimited websites</p>
+        <p>100% data ownership</p>
+        <p>Email reports</p>
+      </div>
+      <button>Start my trial</button>
+    </div>
   </main>
 
   <footer>
