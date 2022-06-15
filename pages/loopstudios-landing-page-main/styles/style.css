@@ -1,3 +1,264 @@
+* {
+    box-sizing: border-box;
+    
+}
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+@font-face {
+    font-family: 'Alata';
+    src: url('../fonts/Alata/Alata-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Josefin_Sans';
+    src: url('../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
+}
+
+body {
+    margin: 0;
+    font-family: 'Josefin_Sans',sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+p {
+    font-family: 'Alata',sans-serif;
+    font-weight: 400;
+    color: hsl(0, 0%, 55%);
+}
+
+h1, h2, h3, h4, ul {
+    margin: 0;
+}
+
+header {
+    background: url('../images/mobile/image-hero.jpg') no-repeat center;
+    background-size: cover;
+    height: 650px;
+    padding: 40px 20px 0 20px;
+}
+
+header ul {
+    display: none;
+}
+
+.logo {
+    background: url('../images/logo.svg') no-repeat center left;
+    height: 20px;
+    background-size: contain;
+    width: 130px;
+    float: left;
+}
+
+.hamburger {
+    background: url('../images/icon-hamburger.svg') no-repeat center right;
+    height: 20px;
+    width: calc(100% - 130px);
+    float: right;
+    cursor: pointer;
+}
+
+h1 {
+    color: white;
+    margin-top: 190px;
+    font-weight: 300;
+    font-size: 2.4rem;
+    border: 2px solid white;
+    padding: 20px;
+    overflow: hidden;
+}
+
+main {
+    margin: 80px 20px;
+    text-align: center;
+}
+
+main img {
+    width: 100%;
+}
+
+main h2 {
+    margin: 40px 0;
+    font-size: 1.9rem;
+    font-weight: 300;
+}
+
+.ourCreations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ourCreations button {
+    order: 2;
+    background: transparent;
+    color: hsl(0, 0%, 0%);
+    border: 1px solid black;
+    padding: 10px 20px;
+    width: 130px;
+    margin: auto;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.items {
+    min-height: 100px;
+    position: relative;
+}
+
+.items img {
+    height: 100%;
+}
+
+.items span {
+    position: absolute;
+    color: hsl(0, 0%, 100%,80%);
+    bottom: 20px;
+    left: 20px;
+    width: 80px;
+    text-align: left;
+}
+
+footer {
+    background-color: black;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 30px 0;
+    gap: 30px;
+}
+
+footer .logo {
+    background-position: center;
+    margin: 40px 0;
+    float: initial;
+    margin: 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer li {
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 10px;
+}
+
+.facebook {
+    background: url('../images/icon-facebook.svg') no-repeat center;
+}
+.twitter {
+    background: url('../images/icon-twitter.svg') no-repeat center;
+
+}
+.pinterest {
+    background: url('../images/icon-pinterest.svg') no-repeat center;
+}
+.instagram {
+    background: url('../images/icon-instagram.svg') no-repeat center;
+}
+
+footer p {
+    margin: 0;
+}
+.socialIcons div {
+    cursor: pointer;
+    height: 40px;
+    width: 30px;
+}
+
+.socialIcons div:hover {
+    border-bottom: 2px solid white;
+}
+
+@media (min-width: 42rem) {
+    header {
+        background: url('../images/desktop/image-hero.jpg') no-repeat center;
+        background-size: cover;
+        padding: 40px 100px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    header .logo{
+        float: none;
+    }
+    header nav {
+        width: calc(100% - 130px);
+    }
+    header ul {list-style: none;
+        display: flex;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+        justify-content: flex-end;
+    }
+    header a {
+        text-decoration: none;
+        color: white;
+        line-height: 20px;
+    }
+    header h1 {
+        margin: 0;
+        height: max-content;
+        width: 550px;
+        font-size: 4rem;
+    }
+    .hamburger {
+        display: none;
+    }
+    main {
+        max-width: 70rem;
+        margin: auto;
+        margin-top: 80px;
+    }
+    .info {
+        display: flex;
+        height: 400px;
+        position: relative;
+    }
+    .info  picture {
+        width: 100%;
+        text-align: left;
+    }
+    .info img {
+        height: 100%;
+        width: auto;
+        margin-right: auto;
+    }
+    .info .text {
+        position: absolute;
+        height: 250px;
+        width: 60%;
+        bottom: 0;
+        right: 0;
+        background: white;
+        overflow: hidden;
+        text-align: left;
+        padding-left: 50px;
+    }
+    .ourCreationsSect {
+        margin-top: 100px;
+    }
+    .ourCreations {
+        flex-flow: row wrap;
+    }
+}
+
+
+.attribution { font-size: 12px; text-align: center; color: white; }
+.attribution a { color: hsl(228, 45%, 74%); }
