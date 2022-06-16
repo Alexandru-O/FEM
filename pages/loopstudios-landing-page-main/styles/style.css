@@ -2,6 +2,9 @@
     box-sizing: border-box;
     
 }
+:root {
+    --clr-primary-dark-grey: hsl(0, 0%, 55%);
+}
 
 @font-face {
     font-family: 'Alata';
@@ -23,7 +26,7 @@ body {
 p {
     font-family: 'Alata',sans-serif;
     font-weight: 400;
-    color: hsl(0, 0%, 55%);
+    color: var(--clr-primary-dark-grey);
 }
 
 h1, h2, h3, h4, ul {
@@ -35,10 +38,56 @@ header {
     background-size: cover;
     height: 650px;
     padding: 40px 20px 0 20px;
+    z-index: 2;
 }
 
-header ul {
+header ul { 
     display: none;
+}
+
+header ul.active {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    z-index: 2;
+    margin-top: 100px;
+    display: initial;
+}
+
+header .logo.active{
+    position: absolute;
+    z-index: 2;
+}
+
+header .hamburger.active {
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    background: url('../images/icon-close.svg') no-repeat center right;
+}
+
+.greyWrap {
+    display: none;
+}
+
+.greyWrap.active {
+    position: absolute;
+    background: black;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: initial;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    z-index: 2;
+}
+
+header li {
+    margin-bottom: 30px;
 }
 
 .logo {
@@ -88,7 +137,7 @@ main h2 {
     gap: 20px;
 }
 
-.ourCreations button {
+.ourCreationsSect button {
     order: 2;
     background: transparent;
     color: hsl(0, 0%, 0%);
@@ -96,6 +145,7 @@ main h2 {
     padding: 10px 20px;
     width: 130px;
     margin: auto;
+    margin-top: 30px;
     letter-spacing: 3px;
     font-weight: 700;
 }
@@ -225,6 +275,7 @@ footer p {
         max-width: 70rem;
         margin: auto;
         margin-top: 80px;
+        padding: 30px;
     }
     .info {
         display: flex;
@@ -253,9 +304,109 @@ footer p {
     }
     .ourCreationsSect {
         margin-top: 100px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .ourCreationsSect button {
+        order: 1;
+        margin: 0;
+        margin-left: auto;
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+
+    .ourCreationsSect button:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .ourCreationsSect h2 {
+        margin: 0;
+        margin-bottom: 30px;
+        width: 50%;
+        text-align: left;
     }
     .ourCreations {
         flex-flow: row wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    .ourCreations  {
+        order: 2;
+    }
+    .items {
+        cursor: pointer;
+    }
+    .items img {
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+    .items img:hover {
+        opacity: 0.3;
+        transition: all 0 ease;
+    }
+    .items img:not( :hover) {
+        opacity: 1;
+        transition: all 0.1s ease;
+    }
+    .items:hover span {
+        color: black;
+    }
+    .items span {
+        font-size: 1.5rem;
+        width: 140px;
+    }
+    footer {
+        padding: 30px;
+        flex-flow: row wrap;
+    }
+    footer .logo {
+        width: calc(50% - 60px);
+        order: 1;
+        background-position: left;
+    }
+    footer .socialIcons {
+        width: calc(50% - 60px);
+        order: 1;
+        justify-content: flex-end;
+    }
+    footer ul {
+        flex-flow: row;
+        order: 2;
+        width: calc(50% - 60px);
+        justify-content: flex-start;
+    }
+    footer p {
+        order: 2;
+        width: calc(50% - 60px);
+        text-align: right;
+        
+    }
+    footer .attribution {
+        order: 2;
+    }
+    a {
+        position: relative;
+    }
+    
+    a::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 0;
+        bottom: -5px;
+        left: calc(50% - 10px);
+        background-color: white;
+        border-radius: 10px;
+        transition: width 0.5s ease;
+    }
+    
+    a:hover::before{
+        width: 20px;
+    }
+    header a {
+        font-size: 0.8rem;
     }
 }
 
