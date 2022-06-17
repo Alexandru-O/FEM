@@ -88,6 +88,16 @@ progress {
     width: 100%;
     appearance: none;
     border: none;
+    height: 16px;
+    border-radius: 10px;
+    background-color: hsl(229, 57%, 11%, 50%);
+}
+
+progress::-webkit-progress-bar {
+    width: 100%;
+    appearance: none;
+    height: 16px;
+    border: none;
     border-radius: 10px;
     background-color: hsl(229, 57%, 11%, 50%);
 }
@@ -105,12 +115,18 @@ progress {
     position: absolute;
     display: block;
     left: 191px;
-    bottom: 3px;
+    bottom: 4px;
 }
 
 progress::-moz-progress-bar {
     background: linear-gradient(to left, hsl(335, 100%, 65%), hsl(6, 100%, 80%));
-    height: 14px;
+    height: 16px;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(to left, hsl(335, 100%, 65%), hsl(6, 100%, 80%));
+    height: 16px;
     border-radius: 10px;
 }
 
@@ -159,9 +175,48 @@ footer {
     line-height: 3rem;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 50rem) {
     body {
-        background: url('../images/bg-desktop.png') no-repeat;
+        background: url('../images/bg-desktop.png') no-repeat bottom center, hsl(229, 57%, 11%);
+        background-size: contain;
+    }
+    main {
+        flex-direction: row;
+    }   
+    .bottomSection {
+        width: 500px;
+        height: 150px;
+        text-align: left;
+        padding: 30px;
+        align-self: flex-end;
+    }
+    progress {
+        height: 16px;
+    }
+    progress::-moz-progress-bar {
+        height: 16px;
+    }
+    #lblUsedStorage {
+        left: 78%;
+        bottom: 3px;
+    }
+    .modal:after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        border: 16px solid transparent;
+        border-top: 0;
+        border-bottom: 16px solid white;
+        bottom: -8px;
+        right: -8px;
+        transform: rotate(270deg);
+    }
+    .modal {
+        top: -33px;
+        bottom: auto;
+        right: 30px;
+        left: auto;
     }
 }
 
