@@ -8,12 +8,12 @@
 
     --clr-facebook: hsl(208, 92%, 53%);
     --clr-twitter: hsl(203, 89%, 53%);
-    --clr-instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+    --clr-instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
     --clr-youTube: hsl(348, 97%, 39%);
 
     /* Dark Theme */
 
-    --clr-toggle_dark: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+    --clr-toggle_dark: linear-gradient(to right,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 
     --clr-very-dark-blue: hsl(230, 17%, 14%);
     --clr-dark-desaturated-blue: hsl(228, 28%, 20%);
@@ -31,7 +31,7 @@
 
     /* Fonts */
 
-    --fs-1: 14px;
+    --fs-1: 12px;
     --fw-400: 400;
     --fw-600: 600;
     --fw-700: 700; 
@@ -181,14 +181,113 @@ h2 {
 
 .color-scheme {
     margin: 10px 0;
+    height: 20px;
 }
 
 #color-scheme__btn {
-    /* display: none; */
+    display: none;
 }
 
 .socials-info {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+.social {
+    background-color: var(--clr-light-grayish-blue);
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social div:nth-child(2) {
+    margin-top: 1.5rem;
+}
+
+.social div:last-child {
+    margin-bottom: 1.5rem;
+}
+
+.social__total {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 20px;
+    line-height: 60px;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+}
+
+.line.facebook {
+    background: var(--clr-facebook);
+}
+.line.twitter{
+    background: var(--clr-twitter);
+}
+.line.instagram {
+    background: var(--clr-instagram);
+}
+.line.youtube {
+    background: var(--clr-youTube);
+}
+
+.social__at {
+    font-size: 0.8rem;
+    color: var(--clr-dark-grayish-blue);
+    font-weight: var(--fw-700);
+    padding-left: 2rem;
+}
+
+.social__at.facebook {
+    background: url('../images/icon-facebook.svg') no-repeat center left;
+    background-size: contain;
+}
+
+.social__at.twitter {
+    background: url('../images/icon-twitter.svg') no-repeat center left;
+    background-size: contain;
+}
+
+.social__at.instagram {
+    background: url('../images/icon-instagram.svg') no-repeat center left;
+    background-size: contain;
+}
+
+.social__at.youtube {
+    background: url('../images/icon-youtube.svg') no-repeat center left;
+    background-size: contain;
+}
+
+
+.social p {
+    /* font-size: 0.8rem; */
+    font-weight: var(--fw-400);
+    letter-spacing: 4px;
+}
+
+.green {
+    color: var(--clr-lime-green);
+    background: url('../images/icon-up.svg') no-repeat center left;
+    padding-left: 13px;
+}
+
+.red {
+    color: var(--clr-bright-red);
+    background: url('../images/icon-down.svg') no-repeat center left;
+    padding-left: 13px;
+}
+
+.social__history {
+    font-weight: var(--fw-700);
+    margin-top: 20px;
 }
 
 .attribution { font-size: 11px; text-align: center; }
