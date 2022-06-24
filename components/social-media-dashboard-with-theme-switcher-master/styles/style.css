@@ -114,6 +114,7 @@ body {
     font-size: var(--fs-1);
     display: grid;
     place-content: center;
+    position: relative;
 }
 
 .header {
@@ -295,6 +296,7 @@ h2 {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    border-radius: 5px;
 }
 
 .overview__at {
@@ -304,6 +306,7 @@ h2 {
 .overview__total {
     font-size: 1.8rem;
     font-weight: var(--fw-700);
+    line-height: 1.8rem;
 }
 
 .overview__history {
@@ -377,6 +380,56 @@ h2 {
         color: black;
     }
 
+}
+
+@media (min-width: 70rem) {
+    .dashbord {
+        max-width: 900px;
+    }
+    .dashbord__top-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .header {
+        height: max-content;
+        width: 50%;
+        border-bottom: none;
+    }
+    .color-scheme {
+        width: 50%;
+        height: 74px;
+        margin: 0;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .color-scheme p {
+        padding-right: 20px;
+        text-align: right;
+    }
+    .socials-info {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .social {
+        flex: 1;
+    }
+    .socials__overview {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .overview {
+        flex: 1;
+        min-width: 200px;
+    }
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        line-height: 3rem;
+    }
 }
 
 .attribution { font-size: 11px; text-align: center; }
