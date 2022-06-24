@@ -138,7 +138,6 @@ h2 {
 }
 
 .switch {
-    float: right;
     background-color: var(--clr-toggle-white);
     display: inline-block;
     width: 40px;
