@@ -12,7 +12,7 @@
     --clr-youTube: hsl(348, 97%, 39%);
 
     /* Light Theme */
-
+    --clr-toggle_dark: linear-gradient(to right,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
     --clr-toggle-white: hsl(230, 22%, 74%);
     
     --clr-bg: hsl(0, 0%, 100%);
@@ -130,6 +130,7 @@ p {
 h2 {
     font-size: 1.5rem;
     font-weight: var(--fw-700);
+    color: black;
 }
 
 .color-scheme__text {
@@ -337,6 +338,7 @@ h2 {
     margin: 20px 0;
 }
 
+
 @media (prefers-color-scheme: dark) {
     :root {
     /* Dark Theme */
@@ -374,12 +376,12 @@ h2 {
 
 }
 
-@media (prefers-color-scheme: white) {
+/* @media (prefers-color-scheme: white) {
     h2 {
         color: black;
     }
 
-}
+} */
 
 @media (min-width: 70rem) {
     .dashbord {
