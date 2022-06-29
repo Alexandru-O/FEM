@@ -11,16 +11,6 @@
     --clr-instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
     --clr-youTube: hsl(348, 97%, 39%);
 
-    /* Light Theme */
-    --clr-toggle_dark: linear-gradient(to right,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
-    --clr-toggle-white: hsl(230, 22%, 74%);
-    
-    --clr-bg: hsl(0, 0%, 100%);
-    --clr-top-bg-pattern: hsl(225, 100%, 98%);
-    --clr-card-bg: hsl(227, 47%, 96%);
-    --clr-text-blue: hsl(228, 12%, 44%); 
-    --clr-text-white: hsl(0, 0%, 100%);
-
     /* Fonts */
 
     --fs-1: 12px;
@@ -110,27 +100,49 @@ select {
 }
 
 body {
+    --clr-toggle: hsl(230, 22%, 74%);
+    
+    --clr-bg: hsl(0, 0%, 100%);
+    --clr-top-bg-pattern: hsl(225, 100%, 98%);
+    --clr-card-bg: hsl(227, 47%, 96%);
+    --clr-text-1: hsl(228, 12%, 44%); 
+    --clr-text-2: hsl(230, 17%, 14%);
+}
+
+body.dark-mode {
+    --clr-toggle: linear-gradient(to right,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+    --clr-bg: hsl(230, 17%, 14%);
+    --clr-top-bg-pattern: hsl(232, 19%, 15%);
+    --clr-card-bg: hsl(228, 28%, 20%);
+    --clr-text-1: hsl(228, 34%, 66%);
+    --clr-text-2: hsl(0, 0%, 100%);
+}
+
+body {
     font-family: 'Inter', sans-serif;
     font-size: var(--fs-1);
     display: grid;
     place-content: center;
     position: relative;
+    color: var(--clr-text-2);
+    background-color: var(--clr-bg);
 }
 
 .header {
     padding: 10px 0;
-    border-bottom: 1px solid var(--clr-text-blue);
+    border-bottom: 1px solid var(--clr-text-1);
 }
 
 p {
-    color: var(--clr-text-blue);
+    color: var(--clr-text-1);
     font-weight: var(--fw-700);
 }
 
 h2 {
     font-size: 1.5rem;
     font-weight: var(--fw-700);
-    color: black;
+    color: var(--clr-text-2);
 }
 
 .color-scheme__text {
@@ -139,7 +151,7 @@ h2 {
 }
 
 .switch {
-    background-color: var(--clr-toggle-white);
+    background-color: var(--clr-toggle);
     display: inline-block;
     width: 40px;
     height: 20px;
@@ -153,7 +165,7 @@ h2 {
     content: "";
     width: 14px;
     height: 14px;
-    background-color: var(--clr-text-white);
+    background-color: var(--clr-text-2);
     display: block;
     border-radius: 50%;
     position: absolute;
@@ -162,13 +174,13 @@ h2 {
     transition: all 0.3s;
 }
 
-.toggle:checked + .switch::after {
+.btn-toggle:checked + .switch::after {
     left: 3px;
     background-color: hsl(228, 28%, 20%);
 }
 
-.toggle:checked + .switch {
-    background: var(--clr-toggle_dark)
+.btn-toggle:checked + .switch {
+    background: var(--clr-toggle)
 }
 
 .color-scheme {
@@ -233,7 +245,7 @@ h2 {
 
 .social__at {
     font-size: 0.8rem;
-    color: var(--clr-text-blue);
+    color: var(--clr-text-1);
     font-weight: var(--fw-700);
     padding-left: 2rem;
 }
@@ -340,48 +352,26 @@ h2 {
 
 
 @media (prefers-color-scheme: dark) {
-    :root {
-    /* Dark Theme */
-
-    --clr-toggle_dark: linear-gradient(to right,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
-
-    --clr-bg: hsl(230, 17%, 14%);
-    --clr-top-bg-pattern: hsl(232, 19%, 15%);
-    --clr-card-bg: hsl(228, 28%, 20%);
-    --clr-text-blue: hsl(228, 34%, 66%);
-    --clr-text-white: hsl(0, 0%, 100%);
-    }
-
-    h2 {
-        color: var(--clr-text-white);
-    }
-
-    .switch {
-        background: var(--clr-toggle_dark);
-    }
-
-    .switch::after {
-        left: 3px;
-        background-color: var(--clr-card-bg);
-        
-    }
-    .toggle:checked + .switch::after {
-        left: 23px;
-        background-color: var(--clr-text-white);
+    body {
+        --clr-toggle: linear-gradient(to right,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    
+        --clr-bg: hsl(230, 17%, 14%);
+        --clr-top-bg-pattern: hsl(232, 19%, 15%);
+        --clr-card-bg: hsl(228, 28%, 20%);
+        --clr-text-1: hsl(228, 34%, 66%);
+        --clr-text-2: hsl(0, 0%, 100%);
     }
     
-    .toggle:checked + .switch {
-        background: var(--clr-toggle-white);
+    body.light-mode {
+        --clr-toggle: hsl(230, 22%, 74%);
+        
+        --clr-bg: hsl(0, 0%, 100%);
+        --clr-top-bg-pattern: hsl(225, 100%, 98%);
+        --clr-card-bg: hsl(227, 47%, 96%);
+        --clr-text-1: hsl(228, 12%, 44%); 
+        --clr-text-2: hsl(230, 17%, 14%);
     }
-
 }
-
-/* @media (prefers-color-scheme: white) {
-    h2 {
-        color: black;
-    }
-
-} */
 
 @media (min-width: 70rem) {
     .dashbord {
