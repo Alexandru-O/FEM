@@ -1,0 +1,233 @@
+:root {
+    --mobile : 375px;
+    --desktop: 1440px;
+
+    --clr-dark-violet: hsl(256, 26%, 20%);
+    --clr-grayish-blue: hsl(216, 30%, 68%);
+    --clr-very-dark-violet: hsl(270, 9%, 17%);
+    --clr-line: rgb(191, 178, 206);
+    --clr-dark-grayish-violet: hsl(273, 4%, 51%);
+    --clr-very-light-gray: hsl(0, 0%, 98%, 70%);
+
+    --fs-default: 16px;
+    --fs-small: 14px;
+    
+    --fw-400: 400;
+    --f2-700: 700;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@font-face {
+    font-family: 'DM_Serif_Display';
+    src: url('../fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('../fonts/Karla/Karla-VariableFont_wght.ttf');
+}
+
+body {
+    font-family: 'DM_Serif_Display',sans-serif;
+    text-align: center;
+}
+
+p {
+    font-size: var(--fs-small);
+    color: var(--clr-very-light-gray);
+    font-family: 'Karla',sans-serif;
+}
+
+h1 {
+    line-height: 35px;
+}
+
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    background: url('../images/logo.svg') no-repeat center left;
+    height: 32px;
+    width: 110px;
+}
+
+.hamburger {
+    background: url('../images/icon-hamburger.svg') no-repeat center right;
+    height: 32px;
+    width: 32px;
+}
+
+nav {
+    display: none;
+}
+
+.hero-section-bottom {
+    padding: 80px 20px;
+    background: var(--clr-dark-violet);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+button {
+    font-family: 'Karla', sans-serif;
+    background: none;
+    color: white;
+    width: max-content;
+    padding: 10px 25px;
+    border: 1px solid white;
+    letter-spacing: 2px;
+    font-size: 10px;
+}
+
+.bg-pattern-intro-top {
+    position: absolute;
+    background: url('../images/bg-pattern-intro-left-mobile.svg') no-repeat top left;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-pattern-intro-bottom {
+    position: absolute;
+    background: url('../images/bg-pattern-intro-right-mobile.svg') no-repeat bottom right;
+    width: 100%;
+    height: 100%;
+    bottom: -174px;
+}
+
+.main-section {
+    padding: 80px 20px;
+}
+
+.line-small {
+    width: 50%;
+    height: 1px;
+    background-color: var(--clr-line);
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.main-section h1 {
+    margin-bottom: 40px;
+}
+
+article p {
+    color: var(--clr-dark-grayish-violet);
+}
+
+.icon {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.snappy .icon {
+    background: url('../images/icon-snappy-process.svg') no-repeat center;
+}
+
+.affordable .icon {
+    background: url('../images/icon-affordable-prices.svg') no-repeat center;
+}
+
+.people .icon {
+    background: url('../images/icon-people-first.svg') no-repeat center;
+}
+
+.find-more {
+    margin-top: 50px;
+    background: url('../images/bg-pattern-how-we-work-mobile.svg') no-repeat center right, var(--clr-dark-violet);
+    color: white;
+    padding: 60px 0;
+}
+
+.attribution { font-size: 11px; text-align: center; width: 100%;}
+.attribution a { color: hsl(228, 45%, 44%); }

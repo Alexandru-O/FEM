@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="./scripts/script.js" defer></script>
   
   <title>Insure landing page</title>
 
@@ -15,6 +17,8 @@
 <body>
 
   <header>
+    <div class="logo"></div>
+    <div class="hamburger"></div>
     <nav>
       <ul>
         <li>How we work</li>
@@ -26,21 +30,26 @@
   </header>
 
   <main>
-    
     <div class="hero-section">
-      <div class="hero"></div>
-      <h1>Humanizing your insurance.</h1>
-    
-      <p>Get your life insurance coverage easier and faster. We blend our expertise 
-      and technology to help you find the plan that's right for you. Ensure you 
-      and your loved ones are protected.</p>
-
-      <button>View plans</button>
+      <picture class="hero">
+        <source media="(min-width: 1440px)" srcset="./images/image-intro-desktop.jpg">
+        <source media="(max-width: 375px)" srcset="./images/image-intro-mobile.jpg">
+        <img src="./images/image-intro-mobile.jpg" alt="Family members holding hands">
+      </picture>
+      <div class="hero-section-bottom">
+        <div class="bg-pattern-intro-top"></div>
+        <div class="bg-pattern-intro-bottom"></div>
+        <h1>Humanizing your insurance.</h1>
+        <p>Get your life insurance coverage easier and faster. We blend our expertise 
+        and technology to help you find the plan that's right for you. Ensure you 
+        and your loved ones are protected.</p>
+        <button>VIEW PLANS</button>
+      </div>
     </div>
 
     <div class="main-section">
-      <div class="line"></div>
-      <h2>We're different</h2>
+      <div class="line-small"></div>
+      <h1>We're different</h1>
 
       <article class="snappy">
         <div class="icon"></div>
@@ -49,14 +58,14 @@
         <p>Our application process can be completed in minutes, not hours. Don't get 
         stuck filling in tedious forms.</p>
       </article>
-      <article>
+      <article class="affordable">
         <div class="icon"></div>
         <h3>Affordable Prices</h3>
 
         <p>We don't want you worrying about high monthly costs. Our prices may be low, 
         but we still offer the best coverage possible.</p>
       </article>
-      <article>
+      <article class="people">
         <div class="icon"></div>
         <h3>People First</h3>
 
@@ -64,40 +73,52 @@
         sure you're covered when you need it.</p>
       </article>
       
-      <div class="bottom-section">
-        <h2>Find out more about how we work</h2>
-        <button>How we work</button>
+      <div class="find-more">
+        <h1>Find out more about how we work</h1>
+        <button>HOW WE WORK</button>
       </div>
     </div>
-    Our company
-
-    How we work
-    Why Insure?
-    View plans
-    Reviews
-
-    Help me
-
-    FAQ
-    Terms of use
-    Privacy policy
-    Cookies
-
-    Contact
-
-    Sales
-    Support
-    Live chat
-
-    Others
-
-    Careers
-    Press
-    Licenses
   </main>
-  
-  <div class="attribution">
-    Coded by <a href="#">Alexandru-O</a>.
-  </div>
+  <footer>
+    <div class="logo"></div>
+    <div class="socials">
+      <span class="facebook"></span>
+      <span class="twitter"></span>
+      <span class="pinterest"></span>
+      <span class="instagram"></span>
+    </div>
+    <div class="line-long"></div>
+    <div class="out-company">
+      <p>Our company</p>
+      <a href="#">How we work</a>
+      <a href="#">Why Insure?</a>
+      <a href="#">View plans</a>
+      <a href="#">Reviews</a>
+    </div>
+    <div class="help-me">
+      <p>Help me</p>
+      <a href="#">FAQ</a>
+      <a href="#">Terms of use</a>
+      <a href="#">Privacy policy</a>
+      <a href="#">Cookies</a>
+    </div>
+    <div class="contact">
+      <p>Contact</p>
+      <a href="#">Sales</a>
+      <a href="#">Support</a>
+      <a href="#">Live chat</a>
+    </div>
+    <div class="others">
+      <p>Others</p>
+
+      <a href="#">Careers</a>
+      <a href="#">Press</a>
+      <a href="#">Licenses</a>
+    </div>
+
+    <div class="attribution">
+      Coded by <a href="#">Alexandru-O</a>.
+    </div>
+  </footer>
 </body>
 </html>
