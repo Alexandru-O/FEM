@@ -134,6 +134,7 @@ header {
     height: 32px;
     width: 32px;
     margin: 20px 20px 20px 0;
+    cursor: pointer;
 }
 
 nav {
@@ -184,19 +185,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 1;
 }
-
-/* .hero-section-bottom::before {
-    position: absolute;
-    content: "";
-    background: url('../images/bg-pattern-intro-left-mobile.svg') no-repeat center;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    top: -135px;
-} */
-
 
 button {
     font-family: 'Karla', sans-serif;
@@ -208,6 +197,7 @@ button {
     letter-spacing: 2px;
     font-size: 10px;
     cursor: pointer;
+    z-index: 100;
 }
 
 .find-more button:hover {
@@ -222,12 +212,16 @@ button:hover {
     border-color: white;
 }
 
+.hero-section-bottom .line-small {
+    display: none;
+}
+
 .bg-pattern-intro-top {
     position: absolute;
     background: url('../images/bg-pattern-intro-left-mobile.svg') no-repeat top left;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 2;
 }
 
 .bg-pattern-intro-bottom {
@@ -235,8 +229,8 @@ button:hover {
     background: url('../images/bg-pattern-intro-right-mobile.svg') no-repeat bottom right;
     width: 100%;
     height: 100%;
-    bottom: -174px;
-    z-index: -1;
+    bottom: -274px;
+    z-index: 2;
 }
 
 .main-section {
@@ -383,13 +377,6 @@ footer .logo {
         position: relative;
         min-height: 600px;
         margin-bottom: 200px;
-        z-index: 1;
-    }
-    picture {
-        position: absolute;
-        z-index: 2;
-        right: 10%;
-        top: 100px;
     }
 
     .hero-section-bottom {
@@ -416,15 +403,23 @@ footer .logo {
         top: 340px;
         left: 0;
         height: 510px;
+        z-index: 1;
     }
     
     .bg-pattern-intro-bottom {
-        /* position: absolute; */
+        position: absolute;
         background: url('../images/bg-pattern-intro-right-desktop.svg') no-repeat center right;
         right: 0;
         top: 0;
         width: 50%;
-        /* z-index: 5; */
+        z-index: 3;
+    }
+
+    picture {
+        position: absolute;
+        right: 10%;
+        top: 100px;
+        z-index: 2;
     }
 
     .line-small {
@@ -464,10 +459,15 @@ footer .logo {
         justify-content: space-between;
         align-items: center;
         margin-top: 100px;
+        background: url('../images/bg-pattern-how-we-work-desktop.svg') no-repeat top right, var(--clr-dark-violet);
+        min-height: 250px;
+
     }
     .find-more h1 {
         width: 60%;
         margin: 0;
+        font-size: 3rem;
+        line-height: 3rem;
     }
     .find-more button {
         height: max-content;
@@ -510,6 +510,8 @@ footer .logo {
         margin: auto 10% auto auto;
         height: max-content;
         background: none;
+        justify-content: center;
+        align-items: center;
         
     }
     ul {
@@ -521,12 +523,33 @@ footer .logo {
     }
     li {
         padding: 0;
-        height: max-content;
+        height: 46px;
+        display: grid;
+        place-content: center;
     }
     li a {
         color: var(--clr-dark-grayish-violet);
         font-size: var(--fs-small);
         line-height: var(--fs-small);
+        font-weight: 600;
+    }
+
+    li:last-of-type {
+        background: var(--clr-very-light-gray);
+        padding: 0 20px;
+        color: black;
+        /* border-radius: ; */
+    }
+
+    li:last-of-type a {
+        color: black;
+        border: 1px solid black;
+        padding: 10px 20px;
+    }
+
+    li:last-of-type a:hover {
+        color: white;
+        background: var(--clr-very-dark-violet);
     }
 
     a:hover {
