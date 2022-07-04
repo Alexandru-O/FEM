@@ -1,2 +1,59 @@
+:root {
+    /* layout */
+    --layout-mobile: 375px;
+    --layout-desktop: 1440px;
+    /* colors primary */
+    --clr-strong-cyan: hsl(171, 66%, 44%);
+    --clr-ligh-blue: hsl(233, 100%, 69%);
+    /* colors neutral */
+    --clr-dark-greyish-blue: hsl(210, 10%, 33%);
+    --clr-greyish-blue: hsl(201, 11%, 66%);
+    /* typography */
+    --fs-18: 18px;
+    --fw-400 : 400;
+    --fw-800: 800;
+}
+
+/* CSS RESET */
+@import './reset.css';
+
+@font-face {
+    font-family: 'Bai Jamjuree';
+    src: url('../fonts/Bai_Jamjuree/BaiJamjuree-Regular.ttf');
+}
+
+/* CSS */
+
+/* body {
+    font-family: 'Bai Jamjuree',sans-serif;
+    font-size: var(--fs-18);
+    font-weight: var(--fw-400);
+    color: var(--clr-greyish-blue);
+    text-align: center;
+    background: url('../images/bg-header-mobile.png') no-repeat;
+    /* max-width: var(--layout-mobile);
+    margin: 0;
+} */
+
+/* h1,
+h2,
+h3 {
+    color: var(--clr-dark-greyish-blue);
+} */
+
+/* COMPOSITION */
+
+
+
+/* UTILITY */
+
+
+
+/* BLOCK */
+
+
+
+/* EXCEPTION */
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
