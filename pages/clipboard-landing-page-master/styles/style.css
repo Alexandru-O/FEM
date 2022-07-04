@@ -1,3 +1,6 @@
+/* CSS RESET */
+@import url('./reset.css');
+
 :root {
     /* layout */
     --layout-mobile: 375px;
@@ -8,50 +11,129 @@
     /* colors neutral */
     --clr-dark-greyish-blue: hsl(210, 10%, 33%);
     --clr-greyish-blue: hsl(201, 11%, 66%);
+    /* colors shadow */
+    --clr-strong-cyan-shadow: hsl(171, 66%, 35%);
+    --clr-light-blue-shadow: hsl(233, 100%, 60%);
     /* typography */
-    --fs-18: 18px;
+    font-size: 18px;
+    --fs-1: .88rem;
+    --fs-2: 1.5rem;
+    --fs-3: 2rem;
     --fw-400 : 400;
     --fw-800: 800;
+    
 }
-
-/* CSS RESET */
-@import './reset.css';
 
 @font-face {
     font-family: 'Bai Jamjuree';
     src: url('../fonts/Bai_Jamjuree/BaiJamjuree-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'Bai Jamjuree - medium';
+    src: url('../fonts/Bai_Jamjuree/BaiJamjuree-Medium.ttf');
+}
+
 /* CSS */
 
-/* body {
+body {
     font-family: 'Bai Jamjuree',sans-serif;
-    font-size: var(--fs-18);
+    font-size: var(--fs-1);
     font-weight: var(--fw-400);
     color: var(--clr-greyish-blue);
     text-align: center;
-    background: url('../images/bg-header-mobile.png') no-repeat;
-    /* max-width: var(--layout-mobile);
-    margin: 0;
-} */
+    background: url('../images/bg-header-mobile.png') no-repeat top;
+    max-width: var(--layout-mobile);
+    margin-inline:  auto;
+}
 
-/* h1,
+h1,
 h2,
 h3 {
+    font-family: 'Bai Jamjuree - medium', sans-serif;
     color: var(--clr-dark-greyish-blue);
-} */
+    font-weight: var(--fw-800);
+}
+h1 {
+    font-size: var(--fs-2);
+    line-height: 1.2;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
 
 /* COMPOSITION */
 
+.body-flow > * {
+    margin-top: 5rem;
+}
 
+.grid-flow {
+    display: grid;
+    gap: var(--grid-gap, 3rem);
+}
+
+.flex-flow {
+    display: flex;
+    flex-flow: column wrap;
+    gap: var(--flex-gap, 1.5rem);
+}
 
 /* UTILITY */
 
 
+.padding-LR-14 {
+    padding: 32px;
+}
+
+.background-green {
+    background-color: var(--clr-strong-cyan);
+}
+
+.background-blue {
+    background-color: var(--clr-ligh-blue);
+}
+
+.radius-100 {
+    border-radius: 100vmax;
+}
+
+.text-white {
+    color: white;
+}
+
+.btn-padding {
+    padding: 10px;
+}
+
+.shadow-green {
+    box-shadow:  0 3px var(--clr-strong-cyan-shadow);
+}
+
+.shadow-blue {
+    box-shadow:  0 3px var(--clr-light-blue-shadow);
+}
 
 /* BLOCK */
 
+.logo {
+    background: url('../images/logo.svg') no-repeat center;
+    background-size: contain;
+}
 
+.header__logo {
+    height: 7rem;
+}
+
+.footer__logo {
+    height: 3rem;
+}
+
+.margin-top-2 {
+    margin-top: 3rem;
+}
 
 /* EXCEPTION */
 

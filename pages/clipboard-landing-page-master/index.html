@@ -9,16 +9,18 @@
   <title>Clipboard landing page</title>
 
 </head>
-<body>
+<body class="body-flow padding-LR-14">
 
-  <header>
-    <div class="logo"></div>
-    <h1>A history of everything you copy</h1>
-    <p>Clipboard allows you to track and organize everything you 
-    copy. Instantly access your clipboard on all your devices.</p>
-    <div class="header__buttons">
-      <div class="btn-ios">Download for iOS</div>
-      <div class="btn-mac">Download for Mac</div>
+  <header class="[ header ] [ grid-flow ]">
+    <div class="header__logo logo"></div>
+    <div class="[ header__content ] [ flex-flow ]">
+      <h1>A history of everything you copy</h1>
+      <p>Clipboard allows you to track and organize everything you 
+      copy. Instantly access your clipboard on all your devices.</p>
+      <div class="[ header__buttons ] [ flex-flow ] [ margin-top-2 ]">
+        <button class="[ btn-ios ] [ background-green radius-100 text-white btn-padding shadow-green ]">Download for iOS</button>
+        <button class="[ btn-mac ] [ background-blue radius-100 text-white btn-padding shadow-blue ]">Download for Mac</button>
+      </div>
     </div>
   </header>
 
@@ -74,7 +76,7 @@
     </div>
   </main>
   <footer>
-    <div class="logo"></div>
+    <div class="logo logo-bottom"></div>
     <div class="menu">
       <a href="#">FAQs</a>
       <a href="#">Contact Us</a>
