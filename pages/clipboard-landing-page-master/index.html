@@ -9,11 +9,11 @@
   <title>Clipboard landing page</title>
 
 </head>
-<body class="body-flow padding-LR-14">
+<body class="body-flow">
 
-  <header class="[ header ] [ grid-flow ]">
+  <header class="[ header ] [ grid-flow ] [ padding-LR-14 ]">
     <div class="header__logo logo"></div>
-    <div class="[ header__content ] [ flex-flow ]">
+    <div class="[ header__content ]">
       <h1>A history of everything you copy</h1>
       <p>Clipboard allows you to track and organize everything you 
       copy. Instantly access your clipboard on all your devices.</p>
@@ -24,70 +24,84 @@
     </div>
   </header>
 
-  <main>
-    <article class="keep-track">
+  <main class="[ main-flow ][ padding-LR-14 ]">
+    <article class="[ keep-track ]">
       <h2>Keep track of your snippets</h2>
       <p>Clipboard instantly stores any item you copy in the cloud, 
       meaning you can access your snippets immediately on all your 
       devices. Our Mac and iOS apps will help you organize everything.</p>
-      <div class="keep-track__bottom-section">
-        <img src="./images/image-computer.png" alt="a computer">
-        <h3>Quick Search</h3>
-        <p>Easily search your snippets by content, category, web address, application, and more.</p>
-        <h3>iCloud Sync</h3>
-        <p>Instantly saves and syncs snippets across all your devices.</p>
-        <h3>Complete History</h3>
-        <p>Retrieve any snippets from the first moment you started using the app.</p>
+      <div class="[ keep-track__bottom-section ] [ margin-top-2 ]">
+        <img class="computer-img" src="./images/image-computer.png" alt="a computer">
+        <div class="[ list ] [ flex-flow ] [ margin-top-2 ] ">
+          <div class="list__item">
+            <h3>Quick Search</h3>
+            <p>Easily search your snippets by content, category, web address, application, and more.</p>
+          </div>
+          <div class="list__item">
+            <h3>iCloud Sync</h3>
+            <p>Instantly saves and syncs snippets across all your devices.</p>
+            </div>
+          <div class="list__item">
+            <h3>Complete History</h3>
+            <p>Retrieve any snippets from the first moment you started using the app.</p>
+          </div>
+        </div>
       </div>
     </article>
     <article class="access">
       <h2>Access Clipboard Anywhere</h2>
       <p>Whether you're on the go, or at your computer, you can access all your Clipboard 
       snippets in a few simple clicks.</p>
-      <img src="./images/image-devices.png" alt="devices">
+      <img class="[ img-devices ] [ margin-top-2 ]" src="./images/image-devices.png" alt="devices">
     </article>
     <article class="supercharge">
       <h2>Supercharge your workflow</h2>
       <p>We've got the tools to boost your productivity.</p>
-      <div class="supercharge__bottom-section">
-        <div class="card create-blacklists">
+      <div class="[ supercharge__bottom-section ] [ flex-flow ] [ margin-top-2 ]">
+        <div class="[ card create-blacklists ] [ padding-T-4 ]">
           <h3>Create blacklists</h3>
           <p>Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
         </div>
-        <div class="card plain-text">
+        <div class="[ card plain-text ] [ padding-T-4 ]">
           <h3>Plain text snippets</h3>
           <p>Remove unwanted formatting from copied text for a consistent look.</p>
         </div>
-        <div class="card sneak-preview">
+        <div class="[ card sneak-preview ] [ padding-T-4 ]">
           <h3>Sneak preview</h3>
           <p>Quick preview of all snippets on your Clipboard for easy access.</p>
         </div>
       </div>
     </article>
-    <div class="partners"></div>
+    <div class="[ partners-list ] [ flex-flow ]">
+      <img class="partners-list__item" src="./images/logo-google.png" alt="google">
+      <img class="partners-list__item" src="./images/logo-ibm.png" alt="ibm">
+      <img class="partners-list__item" src="./images/logo-microsoft.png" alt="microsoft">
+      <img class="partners-list__item" src="./images/logo-hp.png" alt="hp">
+      <img class="partners-list__item" src="./images/logo-vector-graphics.png" alt="vector graphics">
+    </div>
     <div class="download">
       <h2>Clipboard for iOS and Mac OS</h2>
       <p>Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
       and you're ready to start adding to your clipboard.</p>
-      <div class="header__buttons">
-        <div class="btn-ios">Download for iOS</div>
-        <div class="btn-mac">Download for Mac</div>
+      <div class="[ header__buttons ] [ flex-flow ] [ margin-top-2 ]">
+        <button class="[ btn-ios ] [ background-green radius-100 text-white btn-padding shadow-green ]">Download for iOS</button>
+        <button class="[ btn-mac ] [ background-blue radius-100 text-white btn-padding shadow-blue ]">Download for Mac</button>
       </div>
     </div>
   </main>
-  <footer>
-    <div class="logo logo-bottom"></div>
-    <div class="menu">
+  <footer class="flex-flow padding-T-2">
+    <div class="logo footer__logo"></div>
+    <div class="[ menu ] [ flex-flow ]">
       <a href="#">FAQs</a>
       <a href="#">Contact Us</a>
       <a href="#">Privacy Policy</a>
       <a href="#">Press Kit</a>
       <a href="#">Install Guide</a>
     </div>
-    <div class="socials">
-      <div class="facebook"></div>
-      <div class="twitter"></div>
-      <div class="instagram"></div>
+    <div class="[ social ] [ flex-flow ]">
+      <div class="social__item facebook"></div>
+      <div class="social__item twitter"></div>
+      <div class="social__item instagram"></div>
     </div>
     <p class="attribution">
       Coded by <a href="#">Alexandru-O</a>.
