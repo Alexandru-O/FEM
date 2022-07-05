@@ -1,0 +1,112 @@
+@import url('./reset.css');
+
+@font-face {
+    font-family: 'Raleway 400';
+    src: url('../fonts/Raleway/static/Raleway-Regular.ttf');
+}
+@font-face {
+    font-family: 'Raleway 700';
+    src: url('../fonts/Raleway/static/Raleway-Bold.ttf');
+}
+@font-face {
+    font-family: 'Open Sans 400';
+    src: url('../fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'Open Sans 700';
+    src: url('../fonts/Open_Sans/static/OpenSans/OpenSans-Bold.ttf');
+}
+
+:root {
+    /* layout */
+    --layout-mobile: 375px;
+    --layout-desktop: 1440px;
+
+    /* colors */
+    --clr-intro: hsl(217, 28%, 15%);
+    --clr-bg-main: hsl(218, 28%, 13%);
+    --clr-bg-footer: hsl(216, 53%, 9%);
+    --clr-bg-testimonials: hsl(219, 30%, 18%);
+    --clr-cta-gradient1: hsl(176, 68%, 64%);
+    --clr-cta-gradient2: hsl(198, 60%, 50%);
+    --clr-error: hsl(0, 100%, 63%);
+    --clr-text: hsl(0, 0%, 100%);
+
+    /* typography */
+    font-size: 14px;
+    --ff-body-400: 'Open Sans 400';
+    --ff-body-700: 'Open Sans 700';
+    --ff-heading-400: 'Raleway 400';
+    --ff-heading-700: 'Raleway 700';
+}
+
+body {
+    font-family: var(--ff-body-400),sans-serif;
+    max-width: var(--layout-mobile);
+    margin: auto;
+    color: var(--clr-text);
+    text-align: center;
+}
+
+.wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.wrapper__top {
+    height: 373px;
+    width: 100%;
+    background: url('../images/bg-curvy-mobile.svg') no-repeat center bottom, var(--clr-intro);
+}
+
+.wrapper__bottom {
+    height: calc(100% - 373px);
+    width: 100%;
+    background:  var(--clr-bg-main);
+}
+
+header {
+    background: var(--clr-intro);
+    padding: 24px 24px 0 24px;
+    display: flex;
+}
+
+main {
+    /* background: var(--clr-bg-main); */
+    position: relative
+}
+
+.header__logo {
+    background: url('../images/logo.svg') no-repeat center left;
+    background-size: contain;
+    width: 80px;
+    height: 24px;
+}
+
+.header__menu {
+    width: calc(100% - 80px);
+    text-align: right;
+}
+
+.hero {
+    margin-bottom: 120px;
+}
+
+.hero__img {
+    padding: 48px 36px 33px 36px;
+}
+
+h1,
+h2 {
+    font-family: var(--ff-heading-700);
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
