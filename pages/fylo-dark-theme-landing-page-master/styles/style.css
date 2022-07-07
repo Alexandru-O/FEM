@@ -457,26 +457,24 @@ footer {
 .footer__socials > * {
     height: 27px;
     width: 27px;
-    background: var(--clr-text) ;
+    /* background: var(--clr-text) ; */
     cursor: pointer;
+}
+
+/* .footer__socials > *:hover,
+.footer__socials > *:hover
+ {
+    background-color: var(--clr-cta-gradient1);
+} */
+
+.footer__socials > * {
+    fill: var(--clr-text);
 }
 
 .footer__socials > *:hover,
 .footer__socials > *:hover
  {
-    background-color: var(--clr-cta-gradient1);
-}
-
-.facebook {
-    mask: url('../images/icon-facebook.svg') no-repeat center;
-}
-
-.twitter {
-    mask: url('../images/icon-twitter.svg') no-repeat center;
-}
-
-.instagram {
-    mask: url('../images/icon-instagram.svg') no-repeat center;
+    fill: var(--clr-cta-gradient1);
 }
 
 .attribution { 
