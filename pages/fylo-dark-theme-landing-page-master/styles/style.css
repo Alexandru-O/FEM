@@ -84,7 +84,7 @@ body {
 }
 
 .wrapper__bottom {
-    height: calc(100% - 373px);
+    height: calc(100% - 473px);
     width: 100%;
     background:  var(--clr-bg-main);
 }
@@ -433,11 +433,7 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: left;
-    gap: 80px;
-}
-
-.footer__menu a:nth-of-type(4) {
-    margin-bottom: 32.5px;
+    gap: 40px;
 }
 
 .footer__menu > * {
@@ -687,7 +683,7 @@ footer {
         flex-flow: wrap;
         min-height: 441px;
         justify-content: space-between;
-        padding: 168px 120px 0 120px;
+        padding: 168px 120px 3rem 120px;
         gap: 20px;
     }
 
