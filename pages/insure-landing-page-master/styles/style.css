@@ -300,29 +300,15 @@ footer {
     gap: 10px;
 }
 
-span {
+span > * {
     height: 30px;
     width: 30px;
-    background-color: var(--clr-dark-grayish-violet);
+    fill: var(--clr-dark-grayish-violet);
     cursor: pointer;
 }
 
-.facebook {
-    mask: url('../images/icon-facebook.svg') no-repeat center;
-    
-}
-.twitter {
-    mask: url('../images/icon-twitter.svg') no-repeat center;
-}
-.pinterest {
-    mask: url('../images/icon-pinterest.svg') no-repeat center;
-}
-.instagram {
-    mask: url('../images/icon-instagram.svg') no-repeat center;
-}
-
-span:hover {
-    background-color: var(--clr-very-dark-violet);
+span:hover * {
+    fill: var(--clr-very-dark-violet);
 }
 
 .line-long {

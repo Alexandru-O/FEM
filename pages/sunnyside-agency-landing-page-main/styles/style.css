@@ -361,55 +361,22 @@ article .text {
     display: flex;
     justify-content: space-around;
     padding: 0 25%;
+    margin-top: 2rem;
 }
 
-.facebook {
-    mask: url('../images/icon-facebook.svg') no-repeat center;
-    width: 100px;
-    height: 100px;
-    background-color: hsl(167, 40%, 24%);
+.social > * {
+    width: 25px;
+    height: 25px;
+    fill: hsl(167, 40%, 24%);
     cursor: pointer;
+    display: grid;
+    place-content: center;
 }
 
-.instagram {
-    mask: url('../images/icon-instagram.svg') no-repeat center;
-    width: 100px;
-    height: 100px;
-    background-color: hsl(167, 40%, 24%);
-    cursor: pointer;
+.social > *:hover > * > *  {
+    fill: white;
 }
 
-.twitter {
-    mask: url('../images/icon-twitter.svg') no-repeat center;
-    width: 100px;
-    height: 100px;
-    background-color: hsl(167, 40%, 24%);
-    cursor: pointer;
-}
-
-.pinterest {
-    mask: url('../images/icon-pinterest.svg') no-repeat center;
-    width: 100px;
-    height: 100px;
-    background-color: hsl(167, 40%, 24%);
-    cursor: pointer;
-}
-
-.facebook:hover {
-    background: hsl(0, 0%, 100%);
-}
-
-.instagram:hover {
-    background: hsl(0, 0%, 100%);
-}
-
-.twitter:hover {
-    background: hsl(0, 0%, 100%);
-}
-
-.pinterest:hover {
-    background: hsl(0, 0%, 100%);
-}
 
 @media (min-width: 40rem) {
     body {

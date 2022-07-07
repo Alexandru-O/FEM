@@ -83,36 +83,6 @@ p {
     font-size: 1.2rem;
 }
 
-.facebookIcon {
-    mask: url('../images/facebook.svg');
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: 30%;
-    height: 40px;
-    width: 40px;
-    background-color: white;
-}
-
-.twitterIcon {
-    mask: url('../images/twitter.svg');
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: 40%;
-    height: 40px;
-    width: 40px;
-    background-color: white;
-}
-
-.instagramIcon {
-    mask: url('../images/instagram.svg');
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: 50%;
-    height: 40px;
-    width: 40px;
-    background-color: white;
-}
-
 .social {
     display: flex;
     width: 100%;
@@ -127,6 +97,18 @@ p {
     height: 42px;
     width: 42px;
     cursor: pointer;
+    display: grid;
+    place-content: center ;
+}
+
+.icon > * {
+    height: 25px;
+    width: 25px;
+    fill: white;
+}
+
+.icon:hover > * {
+    fill: hsl(300, 69%, 71%);
 }
 
 footer {
@@ -177,4 +159,4 @@ footer {
 }
 
 .attribution { font-size: 11px; text-align: center; width: 100%;}
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { color: hsl(300, 69%, 71%); }

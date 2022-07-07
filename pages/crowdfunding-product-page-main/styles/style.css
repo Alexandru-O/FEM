@@ -532,6 +532,12 @@ label:hover {
     }
     .modal {
         padding: 30px 30px ;
+        min-width: 550px;
+        max-width: 690px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     .infoSection {
         display: flex;

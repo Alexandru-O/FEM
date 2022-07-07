@@ -457,15 +457,8 @@ footer {
 .footer__socials > * {
     height: 27px;
     width: 27px;
-    /* background: var(--clr-text) ; */
     cursor: pointer;
 }
-
-/* .footer__socials > *:hover,
-.footer__socials > *:hover
- {
-    background-color: var(--clr-cta-gradient1);
-} */
 
 .footer__socials > * {
     fill: var(--clr-text);
@@ -485,10 +478,6 @@ footer {
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
-
-/* input[type="email"]:invalid {
-    box-shadow: 0 0 5px 1px red;
-} */
 
 .active {
     display: initial;

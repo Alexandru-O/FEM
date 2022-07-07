@@ -158,9 +158,9 @@ a:focus {
     color: var(--clr-strong-cyan);;
 }
 
-.social__item:hover,
-.social__item:focus {
-    background-color: var(--clr-strong-cyan);
+svg:hover,
+:focus {
+   fill: var(--clr-strong-cyan);
 }
 
 /* BLOCK */
@@ -210,20 +210,8 @@ footer {
 .social__item {
     height: 24px;
     width: 24px;
-    background: var(--clr-dark-greyish-blue);
+    fill: var(--clr-dark-greyish-blue);
     cursor: pointer;
-}
-
-.facebook {
-    mask: url('../images/icon-facebook.svg') no-repeat center;
-}
-
-.twitter {
-    mask: url('../images/icon-twitter.svg') no-repeat center;
-}
-
-.instagram {
-    mask: url('../images/icon-instagram.svg') no-repeat center;
 }
 
 /* EXCEPTION */
