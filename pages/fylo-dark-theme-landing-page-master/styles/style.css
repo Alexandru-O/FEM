@@ -377,6 +377,15 @@ p,a {
     padding: 16px 0;
 }
 
+.modal__error {
+    position: absolute;
+    font-size: var(--fs-200);
+    color: var(--clr-error);
+    bottom: 100px;
+    left: 55px;
+    display: none;
+}
+
 footer {
     background-color: var(--clr-bg-footer);
     padding: 168px 28px 0 28px;
@@ -475,6 +484,14 @@ footer {
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+/* input[type="email"]:invalid {
+    box-shadow: 0 0 5px 1px red;
+} */
+
+.active {
+    display: initial;
 }
 
 @media ( min-width: 60rem ) {
@@ -710,6 +727,12 @@ footer {
         font-size: var(--fs-400);
         line-height: 3rem;
     }
+
+    .modal__error {
+        bottom: 25px;
+        left: 105px;
+    }
+    
     
 }
 
