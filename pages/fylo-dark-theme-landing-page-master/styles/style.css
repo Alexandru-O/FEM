@@ -56,6 +56,7 @@
 
 body {
     background: var(--clr-bg-body);
+    position: relative;
 }
 
 .content {
@@ -64,13 +65,14 @@ body {
     margin: auto;
     color: var(--clr-text);
     text-align: center;
+    position: relative;
 }
 
 .wrapper {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     z-index: -1;
 }
@@ -429,6 +431,11 @@ footer {
     margin-bottom: 32.5px;
 }
 
+.footer__menu > * {
+    display: flex;
+    flex-direction: column;
+}
+
 .footer__socials {
     display: flex;
     flex-direction: row;
@@ -690,10 +697,6 @@ footer {
     .contact__email {
         background-size: 24px 20px;
         line-height: 35px;
-    }
-    .footer__menu > * {
-        display: flex;
-        flex-direction: column;
     }
     .footer__menu {
         flex-flow:wrap ;
