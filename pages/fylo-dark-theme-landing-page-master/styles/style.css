@@ -30,6 +30,7 @@
     --clr-bg-testimonials: hsl(219, 30%, 18%);
     --clr-cta-gradient1: hsl(176, 68%, 64%);
     --clr-cta-gradient2: hsl(198, 60%, 50%);
+    --clr-btn-hover: hsl(186, 61%, 72%);
     --clr-error: hsl(0, 100%, 63%);
     --clr-text: hsl(0, 0%, 100%);
     --clr-text-opc: hsl(0, 0%, 100%,70%);
@@ -103,6 +104,18 @@ a {
     color: var(--clr-text);
 }
 
+.header__menu > *:hover,
+.header__menu > *:focus {
+    color: var(--clr-text);
+    text-decoration: underline;
+    text-decoration-color: var(--clr-text-opc);
+}
+
+button:hover,
+button:focus {
+    background: var(--clr-btn-hover);
+}
+
 .header__logo {
     background: url('../images/logo.svg') no-repeat center left;
     background-size: contain;
@@ -155,6 +168,7 @@ p,a {
     color: var(--clr-text);
     font-family: var(--ff-heading-bold);
     border-radius: 100vmax;
+    cursor: pointer;
 }
 
 .hero__cta {
@@ -214,6 +228,7 @@ p,a {
 
 .middle-card__link {
     width: 130px;
+    cursor: pointer;
 }
 
 .middle-card__link > * {
@@ -221,14 +236,26 @@ p,a {
     font-size: var(--fs-300);
 }
 
-.middle-card__link a::after {
-    content: "";
-    display: block;
-    background: url('../images/icon-arrow.svg') no-repeat center center;
-    width: 12px;
-    height: 12px;
-    float: right;
-    margin-top: 6px;
+.middle-card__link:hover .arrow__color {
+    fill: var(--clr-text);
+}   
+
+.middle-card__link:hover .line {
+    background-color: var(--clr-text);
+}  
+
+.middle-card__link:hover a {
+    color: var(--clr-text);
+}
+
+.arrow {
+    position: relative;
+    top: 4px
+}
+
+.middle-card__link > *:hover,
+.middle-card__link > *:focus {
+    color: white;
 }
 
 .line {
@@ -394,26 +421,37 @@ footer {
     gap: 10px;
 }
 
-.facebook {
-    mask: url('../images/icon-facebook.svg') no-repeat center;
+.footer__socials > * {
     height: 27px;
     width: 27px;
     background: var(--clr-text) ;
+    cursor: pointer;
+}
+
+.footer__socials > *:hover,
+.footer__socials > *:hover
+ {
+    background-color: var(--clr-cta-gradient1);
+}
+
+.facebook {
+    mask: url('../images/icon-facebook.svg') no-repeat center;
 }
 
 .twitter {
     mask: url('../images/icon-twitter.svg') no-repeat center;
-    height: 27px;
-    width: 27px;
-    background: var(--clr-text) ;
 }
 
 .instagram {
     mask: url('../images/icon-instagram.svg') no-repeat center;
-    height: 27px;
-    width: 27px;
-    background: var(--clr-text) ;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    line-height: 2rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
