@@ -72,13 +72,13 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     z-index: -1;
 }
 
 .wrapper__top {
-    height: 373px;
+    height: 421px;
     width: 100%;
     background: url('../images/bg-curvy-mobile.svg') no-repeat center bottom, var(--clr-intro);
 }
@@ -433,7 +433,7 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: left;
-    gap: 16px;
+    gap: 80px;
 }
 
 .footer__menu a:nth-of-type(4) {
@@ -443,6 +443,12 @@ footer {
 .footer__menu > * {
     display: flex;
     flex-direction: column;
+    gap: 16px;
+}
+
+.footer__menu a:hover,
+.footer__menu a:focus {
+    color: var(--clr-text);
 }
 
 .footer__socials {
@@ -679,9 +685,10 @@ footer {
     footer {
         display: flex;
         flex-flow: wrap;
-        height: 441px;
+        min-height: 441px;
         justify-content: space-between;
         padding: 168px 120px 0 120px;
+        gap: 20px;
     }
 
     .contact > *:where(:not(:first-child)) {
@@ -732,7 +739,5 @@ footer {
         bottom: 25px;
         left: 105px;
     }
-    
-    
 }
 
