@@ -12,6 +12,7 @@
     --clr-primary-500: hsl(0, 100%, 63%);
 
     --clr-neutral-100: hsl(207, 100%, 98%);
+    --clr-neutral-400: hsl(192, 100%, 50%);
     --clr-neutral-400: hsl(192, 100%, 9%);
 
     /* Typography */
@@ -39,8 +40,8 @@
     --fs-body: var(--fs-200);
     --fs-primary-heading: var(--fs-550);
     --fs-secondary-heading: var(--fs-450);
-    --fs-large: var(--fs-800);
-    --fs-nav: var(--fs-200);
+    --fs-big: var(--fs-800);
+    --fs-desc-para: var(--fs-200);
 }
 
 @font-face {
@@ -104,6 +105,12 @@
 .fs-secondary-heading {
     font-size: var(--fs-secondary-heading);
 }
+.fs-desc-para {
+    font-size: var(--fs-desc-para);
+}
+.fs-big {
+    font-size: var(--fs-big);
+}
 
 /* Block */
 
@@ -114,7 +121,7 @@
         --fs-body: var(--fs-400);
         --fs-primary-heading: var(--fs-700);
         --fs-secondary-heading: var(--fs-600);
-        --fs-large: var(--fs-900);
-        --fs-nav: var(--fs-500);
+        --fs-big: var(--fs-900);
+        --fs-desc-para: var(--fs-500);
     }
 }
