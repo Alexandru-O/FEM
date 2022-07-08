@@ -300,14 +300,22 @@ footer {
     gap: 10px;
 }
 
+<<<<<<< HEAD
 span > * {
+=======
+.socials > * > * {
+>>>>>>> dca453ebf6e9c37bc5ffa6865a29cb931cfed273
     height: 30px;
     width: 30px;
     fill: var(--clr-dark-grayish-violet);
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 span:hover * {
+=======
+.socials > *:hover > * {
+>>>>>>> dca453ebf6e9c37bc5ffa6865a29cb931cfed273
     fill: var(--clr-very-dark-violet);
 }
 
