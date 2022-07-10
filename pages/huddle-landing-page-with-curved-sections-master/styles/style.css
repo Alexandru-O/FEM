@@ -71,7 +71,8 @@ body {
 
 .two-columns {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
 }
 
 /* Utility */
@@ -163,9 +164,10 @@ body {
     border: none;
     color: var(--clr-neutral-100);
     font-weight: var(--fw-semi-bold);   
+    width: max-content;
 }
 .button[data-type="primary"] {
-    padding: 10px 34px;
+    padding: 2% 8%;
     background-color: var(--clr-primary-400);
     border-radius: 100vmax;
 }
@@ -192,7 +194,11 @@ h2 {
 }
 .logo {
     width: 5.3125rem;
+    display: grid;
+    place-content: center;
 }
+
+
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
@@ -212,6 +218,8 @@ h2 {
         --padding-header: 3.75rem;
         --padding-main:  7.25rem;
         --padding-footer: 7.25rem;
+
+        --padding-button-primary: 1.875rem 6.25rem;
     }
 
 }
