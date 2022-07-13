@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins 700';
+    src: url('../fonts/Poppins/Poppins-Bold.ttf');
+}
+
+root {
+    --ff-primary: 'Open Sans', sans-serif;
+    --ff-secondary: 'Poppins 700', sans-serif;
+    --ff-body: var(--ff-primary);
+    --ff-heading: var(--ff-secondary);
+}
