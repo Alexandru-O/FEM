@@ -5,41 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="../starter-code/styles/style.css">
   
   <title>Single-page design portfolio</title>
 </head>
 <body>
 
-  Free Consultation
-
-  Design solutions made easy
-
-  With over ten years of experience in various design disciplines, I'm your one-stop shop for your design needs.
-
-  Graphic Design
-  UI/UX
-  Apps
-  Photography
-  Illustrations
-  Motion Graphics
-
-  I'm Amy, and I'd love to work on your next project
-
-  I love working with others to create beautiful design solutions. I've designed everything from brand illustrations 
-  to complete mobile apps. I'm also handy with a camera!
-
-  Free Consultation
-
-  My Work
-
-  Book a call with me
-
-  I'd love to have a chat to see how I can help you. The best first step is for us to discuss your project during a 
-  free consultation. Then we can move forward from there.
-
-  Free Consultation
-
-  Free Consultation
+  <header class="primary-header | margin-header margin-lr-content">
+    <div class="container | two-columns ">
+      <img class="logo" src="./assets/logo.svg" alt="">
+      <button class="button | fs-button padding-button | bg-neutral-900 text-neutral-100">Free Consultation</button>
+    </div>
+  </header>
+  <main>
+    <section class="hero | margin-lr-content margin-hero">
+      <h1 class="fs-primary-heading fw-bold">Design solutions made easy</h1>
+      <p>With over ten years of experience in various design disciplines, I'm your one-stop shop for your design needs.</p>
+    </section>
+    <div class="list | margin-lr-content">
+      <div class="card">Graphic Design</div>
+      <div class="card">UI/UX</div>
+      <div class="card">Apps</div>
+      <div class="card">Photography</div>
+      <div class="card">Illustrations</div>
+      <div class="card">Motion Graphics</div>
+    </div>
+    <section class="info | margin-lr-content">
+      <img src="./assets/image-amy.webp" alt="a woman smiling">
+      <div class="info__text">
+        <h2>I'm Amy, and I'd love to work on your next project</h2>
+        <p>I love working with others to create beautiful design solutions. I've designed everything from brand illustrations 
+        to complete mobile apps. I'm also handy with a camera!</p>
+        <button class="button">Free Consultation</button>
+      </div>
+    </section>
+    <section>
+      <h2>My Work</h2>
+      <div class="slider"></div>
+      <div class="arrows">
+        <button class="left-arrow"></button>
+        <button class="right-arrow"></button>
+      </div>
+    </section>
+    <section class="cta | margin-lr-content">
+      <div class="cta__content">
+        <h2>Book a call with me</h2>
+        <p>I'd love to have a chat to see how I can help you. The best first step is for us to discuss your project during a 
+        free consultation. Then we can move forward from there.</p>
+      </div>
+      <button class="button">Free Consultation</button>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <img class="logo" src="./assets/logo.svg" alt="logo">
+      <button class="button">Free Consultation</button>
+    </div>
+  </footer>
 
 </body>
 </html>

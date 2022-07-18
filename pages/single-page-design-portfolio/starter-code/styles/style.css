@@ -1,0 +1,183 @@
+@import 'reset.css';
+
+:root {
+    --layout-mobile : 375px;
+    --layout-tablet: 768px;
+    --layout-desktop: 1440px;
+
+    /* colors */
+
+    --clr-neutral-100: hsl(28, 100%, 97%);
+    --clr-neutral-400: hsl(30, 5%, 45%);
+    --clr-neutral-900: hsl(0, 0%, 1%);
+
+    --clr-primary-200: hsl(28, 89%, 67%);
+    --clr-primary-300: hsl(0, 78%, 79%);
+    --clr-primary-400: hsl(7, 77%, 66%);
+    --clr-primary-500: hsl(314, 45%, 23%);
+    --clr-primary-600: hsl(172, 46%, 57%);
+    --clr-primary-700: hsl(252, 66%, 62%);
+
+    /* typography */
+
+    --ff-primary: 'Jakarta medium',sans-serif;
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+
+    --fs-primary-heading: 2.25rem;      /* 36 */
+    --fs-secondary-heading: 1.625rem;   /* 26 */
+    --fs-illustration-title: 1.5rem;    /* 24 */
+    --fs-text: 1rem;                    /* 16 */ 
+    --fs-button: .875rem;               /* 14 */
+
+    --lh-heading: 2.8125rem;
+
+    /* utility */
+
+    --padding-button: 8px 28px;
+    --margin-header: 16px;
+    --margin-lr-content: 16px;
+    --margin-hero: 32px;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --fs-primary-heading: 2.75rem;      /* 44 */
+        --fs-secondary-heading: 2rem;       /* 32 */
+        --fs-illustration-title: 1.5rem;    /* 24 */
+        --fs-text: 1.125rem;                /* 18 */ 
+        --fs-button: 1rem;                  /* 16 */
+
+        --padding-button: 14px 45px;
+        --margin-header: 34px;
+        --margin-lr-content: 40px;
+        --margin-hero: 64px;
+    }
+}
+
+@media (min-width: 1440px) {
+    :root {
+        --fs-primary-heading: 3.5rem;       /* 56 */
+        --fs-secondary-heading: 2.5rem;     /* 40 */
+        --fs-illustration-title: 1.5rem;    /* 24 */
+        --fs-text: 1.125rem;                /* 18 */ 
+        --fs-button: 1rem;                  /* 16 */
+
+        --padding-button: 14px 45px;
+        --margin-header: 34px;
+        --margin-lr-content: 165px;
+        --margin-hero: 32px;
+    }
+}
+
+@font-face {
+    font-family: 'Jakarta medium';
+    src: url('../fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Medium.ttf');
+}
+
+body {
+    font-family: var(--ff-primary);
+    text-align: center;
+}
+
+p {
+    color: var(--clr-neutral-400);
+}
+
+/* composition */
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+}
+
+/* utility */
+
+.text-neutral-100 { 
+    color: var(--clr-neutral-100);
+}
+.text-neutral-400 { 
+    color: var(--clr-neutral-400);
+}
+.text-neutral-900 { 
+    color: var(--clr-neutral-900);
+}
+.bg-neutral-100 { 
+    background-color: var(--clr-neutral-100);
+}
+.bg-neutral-400 { 
+    background-color: var(--clr-neutral-400);
+}
+.bg-neutral-900 { 
+    background-color: var(--clr-neutral-900);
+}
+.bg-primary-200 { 
+    background-color: var(--clr-primary-200);
+}
+.bg-primary-300 { 
+    background-color: var(--clr-primary-300);
+}
+.bg-primary-400 { 
+    background-color: var(--clr-primary-400);
+}
+.bg-primary-500 { 
+    background-color: var(--clr-primary-500);
+}
+.bg-primary-600 { 
+    background-color: var(--clr-primary-600);
+}
+.bg-primary-700 { 
+    background-color: var(--clr-primary-700);
+}
+.ff-primary {
+    font-family: var(--ff-primary);
+}
+.fw-regular {
+    font-weight: var(--fw-regular);
+}
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+.fs-button {
+    font-size: var(--fs-button);
+}
+.fs-primary-heading {
+    font-size: var(--fs-primary-heading);
+}
+.fs-secondary-heading {
+    font-size: var(--fs-secondary-heading);
+}
+.fs-default {
+    font-size: var(--fs-text);
+}
+.fs-illustration-title {
+    font-size: var(--fs-illustration-title);
+}
+.padding-button {
+    padding: var(--padding-button);
+}
+.margin-lr-content {
+    margin-inline-start: var(--margin-lr-content);
+    margin-inline-end: var(--margin-lr-content);
+}
+.margin-header {
+    margin-top: var(--margin-header);
+}
+.margin-hero {
+    margin-block: var(--margin-hero);
+}
+
+/* block */
+
+.logo {
+    width: 48px;
+    height: 48px;
+}
+.button {
+    border: none;
+    border-radius: 100vmax;
+    width: max-content;
+}
+
+/* exception */
