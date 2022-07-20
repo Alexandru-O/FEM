@@ -46,12 +46,19 @@
     src: url('../fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Medium.ttf');
 }
 
+/* general styling */
+
 body {
     font-family: var(--ff-primary);
-    text-align: center;
-    max-width: 1440px;
     font-size: var(--fs-text);
-    margin: auto;
+    text-align: center;
+}
+.container {
+    --max-width: 1110px;
+    --padding: 16px;
+
+    width: clamp(23rem, 90vw, 90rem);
+    margin-inline: auto;
 }
 p {
     color: var(--clr-neutral-400);
@@ -173,13 +180,18 @@ h1 {
 }
 .cards {
     display: grid;
-    grid-template-columns: repeat(6, 1fr) ;
-    /* grid-template-rows: repeat(3, 1fr); */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 24px;
 }
 
 .grid-col-span-2 {
     grid-column: span 2;
+}
+.grid-row-span-2 {
     grid-row: span 2;
 }
+
+
 
 /* exception */
