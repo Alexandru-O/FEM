@@ -54,6 +54,7 @@ body {
     font-size: var(--fs-text);
     text-align: center;
     color: var(--clr-neutral-400);
+    background: var(--clr-neutral-100);
 }
 .container {
     --max-width: 1110px;
@@ -202,6 +203,9 @@ h2 {
     font-size: var(--fs-illustration-title);
     font-weight: var(--fw-bold);
     min-height: 182px;
+}
+.graphic {
+    background: url('../assets/pattern-graphic-design.svg') no-repeat top right;
 }
 /* .hero {
     margin-block-start: clamp(2.00rem, calc(1.25rem + 3.19vw), 4.13rem);
