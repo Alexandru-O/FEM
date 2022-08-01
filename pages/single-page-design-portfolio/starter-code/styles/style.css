@@ -180,6 +180,9 @@ h2 {
 .margin-t-hero {
     margin-top: var(--margin-t-hero);
 }
+.margin-b-hero {
+    margin-bottom: var(--margin-b-hero);
+}
 .border-radius-10 {
     border-radius: 10px;
 }
