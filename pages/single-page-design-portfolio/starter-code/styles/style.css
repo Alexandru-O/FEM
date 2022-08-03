@@ -56,14 +56,7 @@ body {
     color: var(--clr-neutral-400);
     background: var(--clr-neutral-100);
 }
-.container {
-    --max-width: 1110px;
-    --padding: 16px;
 
-    width: clamp(23rem, 90vw, 90rem);
-    margin-inline: auto;
-    padding-inline: 1rem;
-}
 h1, h2 {
     color: var(--clr-neutral-900);
 }
@@ -188,6 +181,14 @@ h2 {
 }
 .move-top-left {
     margin-left: auto;
+}
+
+.container {
+    --max-width: 1110px;
+    --padding: 1rem;
+    width: clamp(23rem, 90vw, 90rem);
+    margin-inline: auto;
+    padding-inline: var(--padding);
 }
 
 
